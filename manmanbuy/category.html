@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>比价搜索---手机版</title>
+    <link rel="stylesheet/less" href="./less/category.less">
+    <!-- <link rel="stylesheet" href="./lib/iconfont-cate/iconfont.css"> -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部  开始 -->
+    <header id="header">
+        <a href="index.html" class="icon-logo">
+            <img src="./images/logo.png" alt="">
+        </a>
+        <a href="javascript:void(0);" class="icon-appdownload">
+            <img src="./images/appdownload.png" alt="">
+        </a>
+    </header>
+    <!-- 头部  结束 -->
+    <!-- 搜索框  开始 -->
+    <section id="search">
+        <form action="javascript:void(0);">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <a href="javascript:void(0);">搜索</a>
+        </form>
+    </section>
+    <!-- 搜索框  结束 -->
+
+    <!-- 主体部分  开始 -->
+    <main id="searchbar">
+        <div class="mui-card">
+            <ul class="mui-table-view">
+                <!-- <li class="mui-table-view-cell mui-collapse">
+                    <a class="mui-navigate-right" href="#">大家电</a>
+                    <div class="mui-collapse-content">
+                        <a href="javascript:void(0);">电视</a>
+                        <a href="javascript:void(0);">电视</a>
+                        <a href="javascript:void(0);">电视</a>
+                        <a href="javascript:void(0);">电视</a>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </main>
+    <!-- 主体部分  结束 -->
+    <!-- 尾部   开始 -->
+    <footer id="footer">
+        <div class="foot_top">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="javascript:$('html,body').scrollTop(0);">
+                <i class="gototop  iconfont icon-dfs13"></i>
+                <span>返回顶部</span>
+            </a>
+        </div>
+        <div class="foot_bottom">
+            <p>
+                <a href="javascript:void(0);" style="color: Red; text-decoration: none;">手机APP下载</a>
+                <a href="http://m.manmanbuy.com">
+                    慢慢买手机版</a> -- 掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+    <!-- 尾部   结束 -->
+    <script type='text/html' id="categorytitleTpl">
+        {{each result value}}
+        <li class="mui-table-view-cell mui-collapse mui-active" index="{{value.titleId}}">
+                <a class="mui-navigate-right" href="###">{{value.title}}</a>
+                <div class="mui-collapse-content">
+                        <a href="javascript:void(0);">电视</a>  
+                </div>
+        </li>
+        {{/each}}
+    </script>
+    <script type='text/html' id="titleTpl">
+        {{each result value index}}
+            <a href="prolist.html?categoryid={{value.categoryId}}&pageid=1">
+                {{value.category}}
+            </a>
+        {{/each}}
+        {{if result.length % 3 == 1 }}
+            <a href="javascript:void(0);"></a>
+            <a href="javascript:void(0);"></a>
+        {{else if result.length % 3 == 2 }}
+            <a href="javascript:void(0);"></a>
+        {{/if}}
+    </script>
+
+    <!-- <script src="./lib/zepto/zepto.min.js"></script> -->
+    <script src="./lib/jquery/jquery.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- <script src="./lib/iconfont/iconfont.js"></script> -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/category.js"></script>
+</body>
+
+</html>

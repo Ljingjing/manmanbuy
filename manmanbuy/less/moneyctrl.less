@@ -1,0 +1,109 @@
+@import 'basehuang.less';
+
+// 内容展示样式开始
+#contain {
+      margin-top: 86px;
+      // height: 140px;
+      background-color: #f0f0f0;
+      padding-top: 10px;
+      width: 100%;
+
+      >.box {
+            width: 100%;
+            border-bottom: 1px solid @border-color;
+            padding: 0;
+            background-color: #fff;
+            >.massage {
+                  display: flex;
+                  padding-bottom: 20px;
+                  padding: 10px;
+                  >a {
+                        width: 120px;
+                        height: 120px;
+                        display: block; // float: left;
+                        margin-right: 10px;
+                        >img {
+                              width: 120px;
+                              height: 120px;
+                        }
+                  }
+                  .con-right {
+                        flex: 1;
+                        >a {
+                              display: block;
+                              font-size: 14px;
+                              color: #000; // display: block;
+                              line-height: 24px;
+                              height: 50px;
+                              overflow: hidden;
+                              text-overflow: ellipsis;
+                              width: 100%;
+                        }
+                        >p {
+                              color: red;
+                        }
+                        >.baojia {
+                              margin-top: 10px;
+                              font-size: 12px;
+                              >a {
+                                    color: #a1a1a1;
+                                    &:nth-child(2){
+                                          float: right;
+                                          margin-right: 5px;
+                                          >i{
+                                                font-size: 16px;
+                                          }
+                                    }
+                              }
+                        }
+                  }
+            }
+      }
+}
+
+// 页码样式开始
+#page {
+      background-color: #f2f2f2;
+      display: flex;
+      text-align: center;
+      line-height: 34px;
+      padding-top: 20px;
+      padding-bottom: 15px;;
+      >a {
+            flex: 1;
+            height: 34px;
+
+
+            >span {
+                  color: #000;
+                  font-size: 14px;
+                  text-align: center;
+                  display: block;
+                  height: 33px;
+                  width: 82px;
+                  background-color: #d4d4d4;
+                  margin: 0 auto;
+                  border-radius: 5px;
+                  border-bottom: 1px solid #bababa;
+                  box-shadow: 0 0 1px #666;
+                  background: -webkit-gradient(linear,0 0,0 100%,from(#f1f1f1),to(#d4d4d4));
+            }
+      }
+      >.last {}
+      >#pageList {
+            flex: 1;
+            height: 34px;
+            font-size: 16px;
+      }
+      >.next {}
+      
+}
+// 相关链接样式开始
+#link {
+      background-color: #f2f2f2;
+      padding-left: 10px;
+      >a{
+            font-size: 14px;
+            color: #000;
+      }
+}

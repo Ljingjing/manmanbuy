@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买省钱控详情页面</title>
+
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="less/productDetail.less">
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="javascript:history.back();" class="back mui-pull-left">&lt;</a>
+        <h4 class="title">国内折扣</h4>
+        <!-- 右边logo -->
+        <div class="app-logo mui-pull-right">
+            <img src="images/header_app.png" alt="">
+        </div>
+    </header>
+
+
+    <main id="main">
+
+        <div class="productInfo">
+            <div class="product">
+                <h3 class="name">移动端凑单品：海天 鲜味 生抽 1.28L
+                </h3>
+                <p class="detail">
+
+                    <span class="productFrom">京东商城</span>
+                    <span class="time">10-25 14:10</span>
+                    <span class="productTips">小编烟火/慢慢买</span>
+                </p>
+                <div class="bigImg">
+                    <img class="small" src="images/hotfire.png" alt="">
+                </div>
+                <p class="productInfo2">
+                    海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成，而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味料，当然也能用作白切系列的蘸酱调料，相信吃过美味鲜的慢友们都了解的。 目前京东商城移动端售价10.9元，不错的凑单品，刚需可入，规格1.28L.
+                </p>
+
+            </div>
+
+            <div class="smallImg">
+                <img class="big" src="images/hotfire.png" alt="">
+            </div>
+            <div class="buy">
+                <button type="button" class="mui-btn mui-btn-warning goBuy" data-id="">前往购买</button>
+                <select name="" id="productList"></select>
+
+            </div>
+        </div>
+        <div class="productCity">
+
+        </div>
+        <div class="qrCode">
+            <div class="mui-row">
+                <div class="nav mui-col-xs-10">
+                    <p>手慢无/神价格/BUG价/优惠券/白菜价/秒杀京东/天猫/苏宁/亚马逊/国美/易迅/1号店</p>
+
+                    <button type="button" class="mui-btn mui-btn-danger">慢慢买|第一时间发布国内外优惠信息</button>
+                </div>
+                <div class="erweima mui-col-xs-2">
+                    <img src="images/qr.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="comment">
+
+        </div>
+
+
+
+
+    </main>
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="footer-nav">
+            <a href="login.html" class="login-btn">登录</a>
+            <a href="register.html" class="register-btn">注册</a>
+            <a href="#" class="return-btn" id="back-to-top">
+                <i class="fa fa-arrow-up"></i> 返回顶部</a>
+        </div>
+        <div class="phone">
+            <a href="#">手机APP下载</a>
+            <span>慢慢买手机版 - - 掌上比价平台</span>
+            <p>m.manmanbut.com</p>
+        </div>
+    </footer>
+    <script id="productTmp" type="text/html">
+        {{each result value}}
+
+        <div class="product">
+                <h3 class="name">{{value.productName}}
+                </h3>
+                <p class="detail">
+
+                    <span class="productFrom">{{value.productFrom}}</span>
+                    <span class="time">{{value.productTime}}</span>
+                    <span class="productTips">{{value.productTips}}</span>
+                </p>
+                <div class="bigImg">
+                    {{@value.productImgSm}}
+                </div>
+                <p class="productInfo2">
+                    {{value.productInfo2}}
+                </p>
+
+        </div>
+
+        <div class="smallImg">
+            {{@value.productImgLg}}
+        </div>
+        <div class="buy">
+            <button type="button" class="mui-btn mui-btn-warning goBuy" data-id="{{value.productId}}">前往购买</button>
+  
+
+        </div>
+        {{ /each }}
+    </script>
+    <script id="cityTmp" type="text/html">
+
+
+        <div class="productCity2">
+                {{each result value }}
+
+                    {{@value.productCity}}
+                {{ /each }}
+        </div>
+
+    </script>
+
+
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="js/productDetail.js"></script>
+    <script>
+        //点击返回顶部,回到页面顶部位置
+        $(function () {
+            // $("#back-to-top").on("tap",
+            //     function () {
+            //         $('html').animate({
+            //             scrollTop: 0
+            //         }, 700);
+            //     });
+            $("#back-to-top").on("tap", function () {
+                mui(".mui-scroll-wrapper").scroll().scrollTo(0, 0, 0);
+
+            });
+        });    
+    </script>
+</body>
+
+</html>

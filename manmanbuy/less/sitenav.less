@@ -1,0 +1,125 @@
+@import 'basewei.less';
+html{
+    font-size: 100px;
+}
+#header {
+    height: 0.5rem;
+    background: #ff841d;
+    font-size: 0.2rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 0.5rem;
+    position: relative;
+    .return {
+        width: 0.23rem;
+        height: 0.23rem;
+        position: absolute;
+        top: 0.14rem;
+        left: 0.2rem;
+        background-image: url(../images/icon_bar.png);
+        background-size: 2.2rem 1.32rem;
+        background-position: -1.04rem -0.1rem;
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .down {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-right: 0.08rem;
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            img {
+                width: 0.34rem;
+                height: 0.34rem;
+            }
+        }
+    }
+}
+
+#main {
+    // width: 100%;
+    // height: 100%;
+    padding: 0.04rem 0.4rem 0 0.4rem;
+    .box {
+        // width: 1rem;
+        // height: 0.3rem;
+        .jd {
+            // float: left;
+            display: inline-block;
+            background-color: #f1f1f1;
+            margin: 0.03rem 0.02rem;
+            a {
+                display: block;
+                padding: 0.05rem 0.1rem;
+                border: 1px solid #ccc; // margin: 0.1rem;
+            }
+            span {
+                line-height: 0.3rem;
+                font-size: 0.14rem;
+                color: black;
+            }
+        }
+    }
+}
+
+#footer {
+    // width: 100%;
+    // height: 0.95rem;
+    .nav {
+        margin-top: 0.1rem;
+        .top {
+            border-top: 0.01rem solid #c4c4c4;
+            border-bottom: 0.01rem solid #c4c4c4;
+            line-height: 0.35rem;
+            text-align: center;
+            font-size: 0.14rem;
+            height: 0.35rem;
+            .login {
+                width: 30%;
+                height: 100%;
+                float: left;
+                color: #5a5a5a;
+            }
+            .sign {
+                float: left;
+                width: 30%;
+                height: 100%;
+                box-sizing: border-box;
+                border-left: 0.01rem solid #c4c4c4;
+                border-right: 0.01rem solid #c4c4c4;
+                color: #5a5a5a;
+            }
+            .move {
+                float: left;
+                height: 100%;
+                width: 40%;
+                color: #5a5a5a;
+                img {
+                    width: 0.15rem;
+                }
+            }
+        }
+        .bottom {
+            background: #efefef;
+            text-align: center;
+            font-size: 0.12rem;
+            padding: 0.15rem 0;
+            color: #666;
+            .f1 {
+                .a1 {
+                    color: red;
+                }
+                .a2 {
+                    color: #5a5a5a;
+                }
+            }
+        }
+    }
+}

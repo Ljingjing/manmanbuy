@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/">
+    <link rel="stylesheet/less" href="less/chuangwei.less">
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body class="mui-ios mui-ios-9 mui-ios-9-1">
+    <header id="header">
+        <a href="index.html" class="logo">
+            <img src="images/header_logo.png" alt="">
+        </a>
+        <a href="index.html" class="app">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+    <!-- 搜索区域 -->
+    <section id="search">
+        <form action="#">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <button type="button" class="mui-btn mui-btn-warning">搜索</button>
+        </form>
+    </section>
+    <div class="mui-content">
+        <div>
+            <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary">
+                <a class="mui-control-item mui-active" href="#item1">
+				综合
+			</a>
+                <a class="mui-control-item" href="javascript:void(0)" id='sails'>
+				销量
+			</a>
+                <a class="mui-control-item pageSize" href="#" id="price">
+				价格<i class="fa fa-caret-down jiage"></i>
+			</a>
+                <a class="mui-control-item" id="comment" href="#">
+				评论<i class="fa fa-caret-down pinlun"></i>
+			</a>
+            </div>
+        </div>
+        <div>
+            <div id="item1" class="mui-control-content mui-active">
+                <ul>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=577259" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20181/small80/Thumb_2018010008383750926.jpg" alt="创维(Skyworth) 40X6 40英寸 全高清 智能网络液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 40X6 40英寸 全高清 智能网络液晶电视</div>
+                            <div class="price"> <em>¥</em>1386</div>
+                            <div class="other">
+                                <div class="mall">5商城报价</div>
+                                <div class="sales">有1311人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=440179" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/20171/small80/Thumb_2017010014590862260.jpg" alt="创维(Skyworth) 55V6 55英寸 IPS硬屏64位芯片4K智能液晶平板电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 55V6 55英寸 IPS硬屏64位芯片4K智能液晶平板电视</div>
+                            <div class="price"> <em>¥</em>2499</div>
+                            <div class="other">
+                                <div class="mall">1商城报价</div>
+                                <div class="sales">有6731人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=563291" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/20178/small80/Thumb_2017080008165461459.jpg" alt="创维(Skyworth) 42X6 42英寸 全高清 wifi智能网络液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 42X6 42英寸 全高清 wifi智能网络液晶电视</div>
+                            <div class="price"> <em>¥</em>1238</div>
+                            <div class="other">
+                                <div class="mall">3商城报价</div>
+                                <div class="sales">有1394人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=507384" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/20172/small80/Thumb_2017020014213445579.jpg" alt="创维(Skyworth) 55M7 55英寸 4K超高清智能液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 55M7 55英寸 4K超高清智能液晶电视</div>
+                            <div class="price"> <em>¥</em>2499</div>
+                            <div class="other">
+                                <div class="mall">2商城报价</div>
+                                <div class="sales">有2402人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=328390" class="goto"></a>
+                        <div class="pic"><img src="http://pro.zuyushop.com:8015/ProPic/20154/small80/Thumb_2015040010460058670.jpg" alt="创维(Skyworth) 32X3 32英寸 高清 智能网络LED液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 32X3 32英寸 高清 智能网络LED液晶电视</div>
+                            <div class="price"> <em>¥</em>886</div>
+                            <div class="other">
+                                <div class="mall">5商城报价</div>
+                                <div class="sales">有4955人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=575004" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/201711/small80/Thumb_2017110009141348744.jpg" alt="创维(Skyworth) 55M9 55英寸 4K超高清 智能网络液晶"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 55M9 55英寸 4K超高清 智能网络液晶</div>
+                            <div class="price"> <em>¥</em>2199</div>
+                            <div class="other">
+                                <div class="mall">6商城报价</div>
+                                <div class="sales">有2043人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=572728" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/201710/small80/Thumb_2017100008550315256.jpg" alt="创维(Skyworth) 65M9 65英寸 4K超高清 HDR智能网络液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 65M9 65英寸 4K超高清 HDR智能网络液晶电视</div>
+                            <div class="price"> <em>¥</em>3399</div>
+                            <div class="other">
+                                <div class="mall">6商城报价</div>
+                                <div class="sales">有958人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=575282" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/201711/small80/Thumb_201711000904156109.jpg" alt="创维(Skyworth)50M9 50英寸 4K超高清 HDR智能互联网电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth)50M9 50英寸 4K超高清 HDR智能互联网电视</div>
+                            <div class="price"> <em>¥</em>1988</div>
+                            <div class="other">
+                                <div class="mall">6商城报价</div>
+                                <div class="sales">有1897人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=573420" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/201711/small80/Thumb_2017110014165756570.jpg" alt="创维(Skyworth) 43M9 43英寸 4K超高清 HDR智能互联网液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 43M9 43英寸 4K超高清 HDR智能互联网液晶电视</div>
+                            <div class="price"> <em>¥</em>1698</div>
+                            <div class="other">
+                                <div class="mall">6商城报价</div>
+                                <div class="sales">有1087人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=572727" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/201710/small80/Thumb_2017100008560921763.jpg" alt="创维(Skyworth) 32X6 32英寸 全高清 智能网络液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 32X6 32英寸 全高清 智能网络液晶电视</div>
+                            <div class="price"> <em>¥</em>899</div>
+                            <div class="other">
+                                <div class="mall">6商城报价</div>
+                                <div class="sales">有2046人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=577260" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20181/small80/Thumb_2018010008375143682.jpg" alt="创维(Skyworth) 43X6 43英寸 全高清 智能网络液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 43X6 43英寸 全高清 智能网络液晶电视</div>
+                            <div class="price"> <em>¥</em>1488</div>
+                            <div class="other">
+                                <div class="mall">5商城报价</div>
+                                <div class="sales">有474人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=552298" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20184/small80/Thumb_2018040013044162825.jpg" alt="创维(Skyworth)65H7 65英寸 4K超高清 HDR智能超薄液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth)65H7 65英寸 4K超高清 HDR智能超薄液晶电视</div>
+                            <div class="price"> <em>¥</em>4599</div>
+                            <div class="other">
+                                <div class="mall">5商城报价</div>
+                                <div class="sales">有2823人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=357862" class="goto"></a>
+                        <div class="pic"><img src="http://pro.zuyushop.com:8015/ProPic/20155/small80/Thumb_2015050008271715552.jpg" alt="创维(Skyworth) 50M6 50英寸 超高清 智能网络LED液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 50M6 50英寸 超高清 智能网络LED液晶电视</div>
+                            <div class="price"> <em>¥</em>2399</div>
+                            <div class="other">
+                                <div class="mall">4商城报价</div>
+                                <div class="sales">有1864人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=578862" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20183/small80/Thumb_2018030009430995963.jpg" alt="创维(Skyworth) 55V7 55英寸 4K超高清 HDR智能网络液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 55V7 55英寸 4K超高清 HDR智能网络液晶电视</div>
+                            <div class="price"> <em>¥</em>2799</div>
+                            <div class="other">
+                                <div class="mall">2商城报价</div>
+                                <div class="sales">有363人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=578861" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20183/small80/Thumb_2018030009444539832.jpg" alt="创维(Skyworth) 50V7 50英寸 4K超高清 HDR智能网络液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 50V7 50英寸 4K超高清 HDR智能网络液晶电视</div>
+                            <div class="price"> <em>¥</em>2499</div>
+                            <div class="other">
+                                <div class="mall">2商城报价</div>
+                                <div class="sales">有264人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=487786" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/20171/small80/Thumb_2017010014571698818.jpg" alt="创维(Skyworth) 42X5 42英寸 全高清智能网络LED液晶平板电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 42X5 42英寸 全高清智能网络LED液晶平板电视</div>
+                            <div class="price"> <em>¥</em>1499</div>
+                            <div class="other">
+                                <div class="mall">2商城报价</div>
+                                <div class="sales">有3119人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                   
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=579105" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20183/small80/Thumb_2018030009235710324.jpg" alt="创维(Skyworth) 43H5 43英寸 4K超高清 HDR智能网络LED液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 43H5 43英寸 4K超高清 HDR智能网络LED液晶电视</div>
+                            <div class="price"> <em>¥</em>2286</div>
+                            <div class="other">
+                                <div class="mall">6商城报价</div>
+                                <div class="sales">有1064人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                   
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=581048" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20185/small80/Thumb_2018050009542821375.jpg" alt="创维(Skyworth) 55F5 55英寸 4K超高清 智能网络液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 55F5 55英寸 4K超高清 智能网络液晶电视</div>
+                            <div class="price"> <em>¥</em>2199</div>
+                            <div class="other">
+                                <div class="mall">4商城报价</div>
+                                <div class="sales">有40人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=473715" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/20171/small80/Thumb_2017010015171056706.jpg" alt="创维(Skyworth) 50V6E 50英寸 4K超高清智能电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 50V6E 50英寸 4K超高清智能电视</div>
+                            <div class="price"> <em>¥</em>1999</div>
+                            <div class="other">
+                                <div class="mall">2商城报价</div>
+                                <div class="sales">有4202人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=576629" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/201712/small80/Thumb_2017120010255370885.jpg" alt="创维(Skyworth) 49M9 49英寸 4K超高清 HDR智能互联网液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 49M9 49英寸 4K超高清 HDR智能互联网液晶电视</div>
+                            <div class="price"> <em>¥</em>1999</div>
+                            <div class="other">
+                                <div class="mall">5商城报价</div>
+                                <div class="sales">有299人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=547952" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/201712/small80/Thumb_201712000923325596.jpg" alt="创维(Skyworth) 50H7 50英寸 4K超高清 智能网络液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 50H7 50英寸 4K超高清 智能网络液晶电视</div>
+                            <div class="price"> <em>¥</em>2599</div>
+                            <div class="other">
+                                <div class="mall">5商城报价</div>
+                                <div class="sales">有2837人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=579156" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20183/small80/Thumb_2018030009275685445.jpg" alt="创维(Skyworth) 55H5 55英寸 4K超高清 HDR智能网络LED液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 55H5 55英寸 4K超高清 HDR智能网络LED液晶电视</div>
+                            <div class="price"> <em>¥</em>2849</div>
+                            <div class="other">
+                                <div class="mall">6商城报价</div>
+                                <div class="sales">有2438人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=580203" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20184/small80/Thumb_2018040009133356759.jpg" alt="创维(Skyworth) 65Q6A 65英寸 4K超高清 智能液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 65Q6A 65英寸 4K超高清 智能液晶电视</div>
+                            <div class="price"> <em>¥</em>6999</div>
+                            <div class="other">
+                                <div class="mall">4商城报价</div>
+                                <div class="sales">有37人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=579024" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20183/small80/Thumb_2018030009400318084.jpg" alt="创维(Skyworth) 55Q5A  55英寸 4K超高清 智能网络液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 55Q5A 55英寸 4K超高清 智能网络液晶电视</div>
+                            <div class="price"> <em>¥</em>5998</div>
+                            <div class="other">
+                                <div class="mall">4商城报价</div>
+                                <div class="sales">有82人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=575652" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/201712/small80/Thumb_2017120009291690968.png" alt="创维(Skyworth) 49G910M  49英寸 4K超高清 智能液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 49G910M 49英寸 4K超高清 智能液晶电视</div>
+                            <div class="price"> <em>¥</em>2999</div>
+                            <div class="other">
+                                <div class="mall">2商城报价</div>
+                                <div class="sales">有93人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=580131" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20184/small80/Thumb_2018040009163366285.jpg" alt="创维(Skyworth) 65Q5A  65英寸 4K超高清 智能语音液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 65Q5A 65英寸 4K超高清 智能语音液晶电视</div>
+                            <div class="price"> <em>¥</em>8998</div>
+                            <div class="other">
+                                <div class="mall">4商城报价</div>
+                                <div class="sales">有32人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=580336" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20185/small80/Thumb_2018050009334880294.jpg" alt="创维(Skyworth) 58F5 58英寸 4K超高清 HDR智能网络液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 58F5 58英寸 4K超高清 HDR智能网络液晶电视</div>
+                            <div class="price"> <em>¥</em>2999</div>
+                            <div class="other">
+                                <div class="mall">4商城报价</div>
+                                <div class="sales">有107人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=567817" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/20179/small80/Thumb_2017090008352256960.jpg" alt="创维(Skyworth) 43G6A 43英寸 4K超高清 智能液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 43G6A 43英寸 4K超高清 智能液晶电视</div>
+                            <div class="price"> <em>¥</em>2749</div>
+                            <div class="other">
+                                <div class="mall">6商城报价</div>
+                                <div class="sales">有92人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=572035" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/201710/small80/Thumb_2017100008570175950.jpg" alt="创维(Skyworth) 65V9 65英寸 4K超高清 HDR智能液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 65V9 65英寸 4K超高清 HDR智能液晶电视</div>
+                            <div class="price"> <em>¥</em>4279</div>
+                            <div class="other">
+                                <div class="mall">4商城报价</div>
+                                <div class="sales">有1156人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=568865" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20188/small80/Thumb_201808001056177237.jpg" alt="创维(Skyworth) 55S8  55英寸 4K超高清 OLED智能液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 55S8 55英寸 4K超高清 OLED智能液晶电视</div>
+                            <div class="price"> <em>¥</em>8598</div>
+                            <div class="other">
+                                <div class="mall">7商城报价</div>
+                                <div class="sales">有148人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=576603" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/201712/small80/Thumb_2017120010114029117.jpg" alt="创维(Skyworth) 49V9 49英寸 4K超高清 HDR智能液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 49V9 49英寸 4K超高清 HDR智能液晶电视</div>
+                            <div class="price"> <em>¥</em>3599</div>
+                            <div class="other">
+                                <div class="mall">2商城报价</div>
+                                <div class="sales">有127人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=568866" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/20179/small80/Thumb_2017090008370331652.jpg" alt="创维(Skyworth) 58G6B 58英寸 4K超高清 智能液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 58G6B 58英寸 4K超高清 智能液晶电视</div>
+                            <div class="price"> <em>¥</em>4798</div>
+                            <div class="other">
+                                <div class="mall">6商城报价</div>
+                                <div class="sales">有85人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=513914" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/201611/small80/Thumb_2016110014104352923.jpg" alt="创维(Skyworth) 55Q8 55英寸 4K超高清智能液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 55Q8 55英寸 4K超高清智能液晶电视</div>
+                            <div class="price"> <em>¥</em>4799</div>
+                            <div class="other">
+                                <div class="mall">4商城报价</div>
+                                <div class="sales">有139人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=579593" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20184/small80/Thumb_2018040008414079635.jpg" alt="创维(Skyworth) 43Q3A  43英寸 4K超高清 智能网络液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 43Q3A 43英寸 4K超高清 智能网络液晶电视</div>
+                            <div class="price"> <em>¥</em>3488</div>
+                            <div class="other">
+                                <div class="mall">4商城报价</div>
+                                <div class="sales">有21人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=530280" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/20173/small80/Thumb_2017030014372645768.jpg" alt="创维(skyworth) 40G6A 40英寸 4K超高清电视智能电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(skyworth) 40G6A 40英寸 4K超高清电视智能电视</div>
+                            <div class="price"> <em>¥</em>2549</div>
+                            <div class="other">
+                                <div class="mall">5商城报价</div>
+                                <div class="sales">有183人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=579200" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20183/small80/Thumb_2018030008495658203.png" alt="创维(Skyworth) 58Q5A 58英寸 4K超高清 智能网络液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 58Q5A 58英寸 4K超高清 智能网络液晶电视</div>
+                            <div class="price"> <em>¥</em>6998</div>
+                            <div class="other">
+                                <div class="mall">3商城报价</div>
+                                <div class="sales">有48人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=540019" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/20174/small80/Thumb_2017040008035818316.jpg" alt="创维(Skyworth) 60Q7 60英寸 4K超高清 AIR超清薄液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 60Q7 60英寸 4K超高清 AIR超清薄液晶电视</div>
+                            <div class="price"> <em>¥</em>6499</div>
+                            <div class="other">
+                                <div class="mall">5商城报价</div>
+                                <div class="sales">有92人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=481996" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/20172/small80/Thumb_2017020009284819755.jpg" alt="创维(Skyworth) 60V8E 60英寸 4K超高清 HDR智能网络液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 60V8E 60英寸 4K超高清 HDR智能网络液晶电视</div>
+                            <div class="price"> <em>¥</em>3788</div>
+                            <div class="other">
+                                <div class="mall">7商城报价</div>
+                                <div class="sales">有3359人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=552577" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/20175/small80/Thumb_2017050008165171597.jpg" alt="创维(Skyworth) 50Q7 50英寸 4K超高清 智能液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 50Q7 50英寸 4K超高清 智能液晶电视</div>
+                            <div class="price"> <em>¥</em>3988</div>
+                            <div class="other">
+                                <div class="mall">5商城报价</div>
+                                <div class="sales">有73人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=505700" class="goto"></a>
+                        <div class="pic"><img src="http://pro.zuyushop.com:8015/ProPic/20169/small80/Thumb_2016090010442940590.jpg" alt="创维(Skyworth) 65S9D 65英寸 4K超高清 OLED智能平面电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 65S9D 65英寸 4K超高清 OLED智能平面电视</div>
+                            <div class="price"> <em>¥</em>16788</div>
+                            <div class="other">
+                                <div class="mall">6商城报价</div>
+                                <div class="sales">有86人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=579106" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/20183/small80/Thumb_2018030009224884776.jpg" alt="创维(Skyworth) 49H5 49英寸 4K超高清 HDR智能网络LED液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 49H5 49英寸 4K超高清 HDR智能网络LED液晶电视</div>
+                            <div class="price"> <em>¥</em>2786</div>
+                            <div class="other">
+                                <div class="mall">6商城报价</div>
+                                <div class="sales">有438人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=536336" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/20173/small80/Thumb_2017030008172762826.jpg" alt="创维(Skyworth) 65Q7 65英寸 4K超高清 智能液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 65Q7 65英寸 4K超高清 智能液晶电视</div>
+                            <div class="price"> <em>¥</em>7498</div>
+                            <div class="other">
+                                <div class="mall">5商城报价</div>
+                                <div class="sales">有105人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=558231" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/20176/small80/Thumb_2017060008275629860.jpg" alt="创维(Skyworth) 55G3 55英寸 4K超高清 智能液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 55G3 55英寸 4K超高清 智能液晶电视</div>
+                            <div class="price"> <em>¥</em>3590</div>
+                            <div class="other">
+                                <div class="mall">5商城报价</div>
+                                <div class="sales">有190人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=536334" class="goto"></a>
+                        <div class="pic"><img src="http://pro-img.zuyushop.com/ProPic/20173/small80/Thumb_2017030008172693287.jpg" alt="创维(Skyworth) 55Q7 55英寸 4K超高清 智能液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 55Q7 55英寸 4K超高清 智能液晶电视</div>
+                            <div class="price"> <em>¥</em>4888</div>
+                            <div class="other">
+                                <div class="mall">5商城报价</div>
+                                <div class="sales">有134人评论</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item ui-border-b">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=552297" class="goto"></a>
+                        <div class="pic"><img src="http://www.zuyushop.com/ProPic/201712/small80/Thumb_2017120009222656685.jpg" alt="创维(Skyworth) 58H7 58英寸 4K超高清 HDR智能超薄液晶电视"></div>
+                        <div class="clearfix inf">
+                            <div class="tit">创维(Skyworth) 58H7 58英寸 4K超高清 HDR智能超薄液晶电视</div>
+                            <div class="price"> <em>¥</em>2899</div>
+                            <div class="other">
+                                <div class="mall">5商城报价</div>
+                                <div class="sales">有3994人评论</div>
+                            </div>
+                        </div>
+                    </li>
+     
+         
+                </ul>
+                <div class="mui-content-padded">
+                    <ul class="mui-pager">
+                        <li class="mui-previous">
+                            <a href="#">
+							上一页
+						</a>
+                        </li>
+                        <li class="mui-next">
+                            <a href="#">
+							下一页
+						</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="item2" class="mui-control-content">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell">
+                        第二个选项卡子项-1
+                    </li>
+                    <li class="mui-table-view-cell">
+                        第二个选项卡子项-2
+                    </li>
+                    <li class="mui-table-view-cell">
+                        第二个选项卡子项-3
+                    </li>
+                </ul>
+            </div>
+            <div id="item3" class="mui-control-content">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell">
+                        第三个选项卡子项-1
+                    </li>
+                    <li class="mui-table-view-cell">
+                        第三个选项卡子项-2
+                    </li>
+                    <li class="mui-table-view-cell">
+                        第三个选项卡子项-3
+                    </li>
+                </ul>
+            </div>
+            <div id="item4" class="mui-control-content">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell">
+                        第四个选项卡子项-1
+                    </li>
+                    <li class="mui-table-view-cell">
+                        第四个选项卡子项-2
+                    </li>
+                    <li class="mui-table-view-cell">
+                        第四个选项卡子项-3
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="top mui-row">
+            <a href="login.html" class="mui-col-xs-4">登录</a>
+            <a href="register.html" class="mui-col-xs-4">注册</a>
+            <a href="javascript:void(0);" class="mui-col-xs-4"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+        </div>
+        <div class="bottom">
+            <p><a href="javascript:void(0);">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台</p>
+            <p>m.manmanbuy.com </p>
+        </div>
+    </footer>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/chuangwei.js"></script>
+    <script id='getproductlisttpl' type='text/html'>
+        {{each result value index}}
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;">
+					{{@value.productImg}}
+					<div class="mui-media-body">
+						{{value.productName}}
+						<p class="mui-ellipsis"><em>¥</em>{{value.productPrice.substr(1)}}</p>
+						<p><span>{{value.productQuote.match(/\d/).toString()}}商城报价</span><span>有{{value.productQuote.match(/\d/).toString()}}人评论</span></p>
+					</div>
+				</a>
+        </li>
+        {{/each}}
+    </script>
+    <script>
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+    (function($) {
+        $('#scroll').scroll({
+            indicators: true //是否显示滚动条
+        });
+        var segmentedControl = document.getElementById('segmentedControl');
+        $('.mui-input-group').on('change', 'input', function() {
+            if (this.checked) {
+                var styleEl = document.querySelector('input[name="style"]:checked');
+                var colorEl = document.querySelector('input[name="color"]:checked');
+                if (styleEl && colorEl) {
+                    var style = styleEl.value;
+                    var color = colorEl.value;
+                    segmentedControl.className = 'mui-segmented-control' + (style ? (' mui-segmented-control-' + style) : '') + ' mui-segmented-control-' + color;
+                }
+            }
+        });
+    })(mui);
+    </script>
+</body>
+
+</html>

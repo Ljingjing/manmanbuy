@@ -1,0 +1,205 @@
+/* CSS Document */
+@mainColor: #f4483e;
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: Arial, "微软雅黑";
+}
+
+img {
+    border: none;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+body,
+p,
+form,
+input,
+button,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: hidden
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+input,
+textarea {
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    -webkit-appearance: none;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+input,
+select,
+textarea {
+    outline: none;
+    border: none;
+    background: none;
+}
+
+a {
+    outline: 0;
+    cursor: pointer;
+}
+
+a:link,
+a:active {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    -webkit-touch-callout: none;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+li,
+ol {
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+body{
+    padding: 45px 0 95px 0;
+}
+
+// 头部公共样式
+#header{
+    width: 100%;
+    background-color: @mainColor;
+    height: 45px;
+    padding:10px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    .logo{
+        width: 70%;
+        a{
+            height:25px;
+            display: block;
+            background: url(../images/header_logo.png) no-repeat;
+            background-size:contain;
+            h4{
+                font-size: 0;
+            }
+        }
+    }
+    .app-logo{
+        width: 30%;
+        text-align: right;
+        img{
+            height: 30px;
+            
+        }
+    }
+}
+
+// 底部公共样式
+#footer{
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    bottom: 0;
+    z-index:999;
+    background-color: #eee;
+    .footer-nav{
+        height: 28px;
+        border: 1px solid #ccc;
+        display: flex;
+        a{
+            display: block;
+            flex: 1;
+            border-right: 1px solid #ccc;
+            color: #000;
+            font-size: 14px;
+            text-align: center;
+            line-height: 28px;
+            text-decoration: none;
+            &.return-btn{
+                border-right: 0;
+                i{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .phone{
+        font-size: 14px;
+        text-align: center;
+        padding-top: 10px;
+        a{
+            color: #f00;
+        }
+        span{
+            color: #666;
+            margin-left: 10px;
+        }
+    }
+}
+

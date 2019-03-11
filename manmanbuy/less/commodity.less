@@ -1,0 +1,129 @@
+@import 'baseyao.less';
+
+@main-color: #ff841d;
+
+
+body{
+    background-color: #fff;
+    /* 给body设置最大宽度让页面在PC端不会太大 */
+    max-width: 750px;
+    /* 让body居中设置居中 块级居中使用margin:0 auto */
+    margin: 0px auto;
+}
+
+html {
+	font-size: 100px;
+}
+// 头部区域1
+#header{
+	position: fixed;
+	top: 0;
+	background-color: #fff;
+	width: 100%;
+	>#header-t {
+		display: flex;
+		height: 0.44rem;
+		border-bottom: 1px	solid #ccc;
+		border-width: 0.5px;
+		>.logo {
+			flex: 2;			
+			>a{
+				img {
+					width: 1rem;
+					display: block;
+					width: 0.8rem;
+					height: 0.24rem;
+					margin: 0 auto;
+					margin-top: 0.1rem;
+				}
+			}			
+		}
+		>.mui-input-row {
+			flex: 3;
+			margin-top: 0.05rem;
+			input {
+				height: 0.3rem;	
+				border-radius: 0.15rem;
+				background-color: #f9f9f9;			
+			}
+		}
+		>#download {
+			flex: 1;
+			position: relative;
+			a {
+				border: 1px solid red;
+				display: block;
+				width: 0.38rem;
+				font-size: 0.14rem;
+				border-radius: 45%;	
+				position: absolute;
+				right: 0.1rem;
+				top: 0.1rem;
+				color: #ff841d;
+			}
+		}
+	}
+	//头部区域2
+	#header-b {
+		ul {
+			height: 0.4rem;
+			li {
+				float: left;
+				width: 20%;			
+				a {
+					display: block;
+					line-height: 0.4rem;
+					color: black;
+					margin-left: 0.05rem;
+					font-size: 0.14rem;
+				}
+			}
+		}
+	}
+}
+
+//主题区域
+#main {
+    margin-top: 1rem;
+    >img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    >button {
+        display: block;
+        margin: 0 auto;
+        width: 2rem;
+        height: 0.4rem;
+        font-size: 0.18rem;
+        margin-top: 0.15rem;
+    }
+    >#expressage {
+        color: #f85000;
+        font-size: 0.2rem;
+        margin-left: 0.2rem;
+        margin-top: 0.15rem;
+    }
+    >h4 {
+        color: #5a5a5a;
+        text-align: center;
+        margin-top: 0.15rem;
+        font-size: 0.16rem;
+    }
+    #content {
+        margin-top: 0.15rem;
+        color: #444;
+        height: 0.24em;
+        line-height: 0.24rem;
+    }
+    >span {
+        color: #999999;
+        font-size: 0.14rem;
+    }
+    >#comment {
+        color: black;
+        font-size: 0.16rem;
+    }
+}
+
+//底部区域

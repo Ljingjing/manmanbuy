@@ -1,0 +1,137 @@
+@import 'baseyao.less';
+
+@main-color: #ff841d;
+
+
+body{
+	background-color: #fff;
+}
+
+html {
+	font-size: 100px;
+}
+// 头部区域1
+#header{
+	position: fixed;
+	top: 0;
+	background-color: #fff;
+	width: 100%;
+	>#header-t {
+		display: flex;
+		height: 0.44rem;
+		border-bottom: 1px	solid #ccc;
+		border-width: 0.5px;
+		>.logo {
+			flex: 2;			
+			>a{
+				img {
+					width: 1rem;
+					display: block;
+					width: 0.8rem;
+					height: 0.24rem;
+					margin: 0 auto;
+					margin-top: 0.1rem;
+				}
+			}			
+		}
+		>.mui-input-row {
+			flex: 3;
+			margin-top: 0.05rem;
+			input {
+				height: 0.3rem;	
+				border-radius: 0.15rem;
+				background-color: #f9f9f9;			
+			}
+		}
+		>#download {
+			flex: 1;
+			position: relative;
+			a {
+				border: 1px solid red;
+				display: block;
+				width: 0.38rem;
+				font-size: 0.14rem;
+				border-radius: 45%;	
+				position: absolute;
+				right: 0.1rem;
+				top: 0.1rem;
+				color: #ff841d;
+			}
+		}
+	}
+	//头部区域2
+	#header-b {
+		ul {
+			height: 0.4rem;
+			li {
+				float: left;
+				width: 20%;			
+				a {
+					display: block;
+					line-height: 0.4rem;
+					color: #333;
+					margin-left: 0.1rem;
+					font-size: 0.15rem;
+				}
+			}
+		}
+	}
+}
+
+.tips {
+	background-color: #f2f2f2 ;
+	color: black;
+	font-size: 0.12rem;
+	margin-top: 0.9rem;
+}
+//主体区域 {
+#main {
+	>.content {
+		height: 1.51rem;
+		display: flex;
+		border-bottom:1px #ccc solid; 
+		>.content-left{
+			flex: 1;
+			>img {
+				height: 1.3rem;
+				width: 1.3rem;
+			}
+			>#ranking {
+				width: 0.4rem;
+				background-color:#ffa04c;
+				float: left;
+				color: #fffaf6;
+				font-size: 0.14rem;
+			}
+		}
+		>.content-right {
+			flex: 1;
+			>.content-right-t {
+				>p{
+					color:red;
+					font-size: 0.16rem;
+				}
+			}
+			>.content-right-b {
+				>p {
+					font-size: 0.14rem;
+				}
+			}
+		}
+	}
+}
+
+//上下页区域
+#footer {
+display: flex;
+	>#btn1 {
+		flex: 1;
+		font-size: 0.16rem;
+		height: 0.3rem;
+	}
+	>#btn2 {
+		flex: 1;
+		font-size: 0.16rem;
+		height: 0.3rem;
+	}
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 添加视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="lib/fontAli/fonts/iconfont.css">
+    <!-- 引入less文件 -->
+    <link rel="stylesheet/less" href="less/coupon.less">
+    <!-- 引入less.js文件 -->
+    <script src="lib/less/less.js"></script>
+    <!-- 引入MUI的CSS文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header" class="clearfix">
+        <a href="index.html" class="iconfont icon-xiangzuo pull-left"></a>
+        <span>优惠券</span>
+        <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap" class="app pull-right"><img src="https://img.alicdn.com/imgextra/i2/690311/TB2beKvaTXYBeNkHFrdXXciuVXa_!!690311.png" alt=""></a>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <section class="nav">
+            <ul class="mui-row">
+                <li class="mui-col-xs-4">
+                    <a href="category.html"><img src="images/ic_cu.png" alt=""><span>比价搜索</span></a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <!-- 页尾区域 -->
+    <footer id="footer">
+        <div class="backToFront">
+            <a href="index.html"><span>首页>优惠券</span></a>
+        </div>
+        <div class="login-footer clearfix">
+            <a href="login.html" class="pull-left">登录</a>
+            <a href="register.html" class="pull-left">注册</a>
+            <a href="javascript:$('html,body').scrollTop(0);" class="pull-left"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+        </div>
+
+        <div class="footer-bottom">
+                <p>
+                        <a href="javascript:void(0);" style="color: Red; text-decoration: none;">手机APP下载</a>
+                        <a href="http://m.manmanbuy.com">
+                            慢慢买手机版</a> -- 掌上比价平台</p>
+                    <p>
+                        m.manmanbuy.com
+                    </p>
+        </div>
+    </footer>
+    <!-- 引入优惠券的品牌部分 -->
+    <script id="couponBrandTmp" type="text/html">
+        {{each result value key}}
+        <li class="mui-col-xs-4">
+            <a href="{{value.couponLink}}?couponid={{value.couponId}}"><img src="{{value.couponImg}}" alt=""><span>{{value.couponTitle}}</span></a>
+        </li>
+        {{/each}}
+    </script>
+    <!-- 引入zepto的js文件 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入mui的js文件 -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 引入模板文件 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 引入自己的js文件 -->
+    <script src="js/coupon.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+@import "base.less";
+
+// html,body{
+//     height: 100%;
+//     position: relative;
+// }
+
+// .swiper-container{
+//     height: 100%;
+//     .swiper-wrapper{
+//         .swiper-slide{
+//             height: auto;
+//         }
+//     }
+// }
+// 导航
+
+#nav{
+    padding: 10px 0px 0px 0px;
+    background-color: #fff;
+    >ul{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        >img{
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            opacity: .5;
+        }
+        >li{
+            width: 25%;
+            height: 90px;
+            >a{
+                display: block;
+               >img{
+                //    width: 70px;
+                //    height: 70px;
+                    width: 50px;
+                    height: 50px;
+               } 
+               >span{
+                    display: block;
+                    color: #5a5a5a;
+                    margin-top: 18px;
+                    font-size: 13px;
+                    margin-top: 10px;
+               }
+            }
+        }
+    }
+}
+
+// 主体部分
+#main{
+    >.title{
+        display: flex;
+        height: 35px;
+        background-color: #ff9000;
+        background: -webkit-gradient(linear,0 0,0 100%,from(#ffaf47),to(#ff9000));
+        line-height: 35px;
+        overflow: hidden;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        padding-left: 10px;
+        border-bottom: 1px solid @border-color;
+        >span{
+            flex: 1;
+        }
+        >img{
+            width: 20px;
+            height: 20px;
+            margin: 8px 10px 0px 0px;
+        }
+    }
+    >.content{
+        background-color: #fff;
+            ul{
+                >li{
+                    height: 129px;
+                    padding: 14px 8px;
+                    border-bottom: 1px solid @border-color;
+                    >a{
+                        display: block;
+                        display: flex;
+                        >.pic{
+                            width: 110px;
+                            >img{
+                                width: 100px;
+                                height: 100px;
+                            }
+                        }
+                        >.desc{
+                            flex: 1;
+                            >.title{
+                                color: #333333;
+                                word-break: break-all;
+                                font-size: 15px;
+                                line-height: 24px;
+                                min-height: 57px;
+                                text-align: left;
+                                font-weight: normal;
+                                >span{
+                                    color: #ff6c00;
+                                    display: inline;
+                                }
+                            }
+                            >.other{
+                                margin-top: 22px;
+                                color: #a1a1a1;
+                                position: relative;
+                                >.mall{
+                                    color: #a1a1a1;
+                                    font-size: 12px;
+                                    float: left;
+                                }
+                                >.comment{
+                                    color: #a1a1a1;
+                                    font-size: 12px;
+                                    position: absolute;
+                                    right: 4px;
+                                    >.icon-comment{
+                                        width: 14px;
+                                        height: 15px;
+                                        font-size: 14px;
+                                        position: absolute;
+                                        top:1px;
+                                        right:13px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    }
+    >.more_bar{
+        text-align: center;
+        width: 100%;
+        >a{
+            display: block;
+            line-height: 30px;
+            background: #F4F4F4;
+            font-size: 13px;
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+            background-image: -moz-linear-gradient(#ffffff, #f4f4f4);
+            background-image: -ms-linear-gradient(#ffffff, #f4f4f4);
+            background-image: -o-linear-gradient(#ffffff, #f4f4f4);
+            background-image: linear-gradient(#ffffff, #f4f4f4);
+            margin: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            color:#5a5a5a;
+        }
+    }
+    >.top10{
+        color: #fff;
+        >.jxhd{
+            margin-top: 20px; 
+            margin-bottom: 6px;
+            height: 35px;
+            line-height: 35px;
+            background-color: #ff9000;
+            background: -webkit-gradient(linear,0 0,0 100%,from(#ffaf47),to(#ff9000));
+            background: -moz-linear-gradient(top, #ffaf47, #ff9000);
+            background: -o-linear-gradient(top,#ffaf47, #ff9000);
+            border-bottom: solid 1px @border-color;
+            overflow: hidden;
+            // color: #fff;
+            padding-left: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            clear: both;
+            >span{
+
+            }
+            >img{
+                width: 20px;
+                height: 20px;
+                float: right;
+                margin-right: 10px;
+                color: #FFF;
+                margin-top: 8px;
+            }
+        }
+    }
+}
+

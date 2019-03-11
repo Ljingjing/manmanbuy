@@ -1,0 +1,226 @@
+@import 'basezhong.less';
+
+/* 顶部搜索区域样式 */
+#search {
+    form {
+        >input {
+            margin-bottom: 0px;
+        }
+    }
+}
+p {
+    font-size: 0.14rem;
+    line-height: 0.21rem;
+}
+/* 导航区域样式 */
+#nav {
+    line-height: 0.36rem;
+    font-size: 0.14rem;
+    border-top: solid 1px #ebebeb;
+    border-bottom: 1px solid #ccc;
+    padding-left: 0.05rem;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+
+    a {
+        margin: 0 0.02rem;
+    }
+}
+
+/* 主体样式 */
+#main {
+
+    /* 十大品牌列表样式 */
+    .brandList {
+        .title {
+            color: #874604;
+            border: 1px solid #c8c8c8;
+            border-left: none;
+            border-right: none;
+            line-height: 0.36rem;
+            font-size: 0.14rem;
+            padding-left: 0.1rem;
+            font-weight: bold;
+        }
+
+        .content {
+            >ul {
+                >li {
+                    &:after {
+                        left: 0;
+                    }
+
+                    >a {
+                        padding: 0.08rem 0.15rem;
+
+                        i {
+                            display: inline-block;
+                            vertical-align: top;
+                            width: 0.2rem;
+                            height: 0.2rem;
+                            background: grey;
+                            line-height: 0.2rem;
+                            text-align: center;
+                            margin-right: 0.05rem;
+                        }
+
+                        .info {
+                            p {
+                                color: #000000;
+
+                                &.sales {
+                                    color: #999999;
+                                    font-size: 0.12rem;
+                                }
+                            }
+
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* 销量前十列表样式 */
+    .sales {
+        .title {
+            color: #874604;
+            border: 1px solid #c8c8c8;
+            border-left: none;
+            border-right: none;
+            line-height: 0.36rem;
+            font-size: 0.14rem;
+            padding-left: 0.1rem;
+            font-weight: bold;
+        }
+
+        >ul {
+            >li {
+                &::after {
+                    left: 0;
+                }
+
+                >a {
+                    display: flex;
+
+                    >img {
+                        width: 1rem;
+                        height: 1rem;
+                        max-width: 1rem;
+                        margin-right: 0.1rem;
+                    }
+
+                    >div {
+                        flex: 1;
+
+                        p {
+                            white-space: normal;
+                            color: #333333;
+                        }
+
+                        .price {
+                            color: #ea3900;
+                        }
+
+                        .star {
+                            background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'  transform='translate(0, 812) scale(1, -1)'/></svg>");
+                            display: inline-block;
+                            width: 0.9rem;
+                            height: 0.18rem;
+                            float: right;
+                        }
+
+                        .other {
+                            margin-top: 0.1rem;
+                            font-size: 0.12rem;
+                            color: #999999;
+
+                            span {
+                                margin-right: 0.05rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* 用户品论样式 */
+    .comment {
+        .title {
+            color: #874604;
+            border: 1px solid #c8c8c8;
+            border-left: none;
+            border-right: none;
+            line-height: 0.36rem;
+            font-size: 0.14rem;
+            padding-left: 0.1rem;
+            font-weight: bold;
+        }
+
+        .content {
+            .mui-table-view-cell {
+                background-color: #f2f2f2;
+
+                &::after {
+                    height: 0;
+                }
+
+                img {
+                    width: 0.8rem;
+                    height: 0.8rem;
+                    max-width: 0.8rem;
+                    float: left;
+                }
+            }
+
+            .mui-media-body {
+                p {
+                    white-space: normal;
+                    padding-left: 0.2rem;
+                }
+            }
+
+            .con {
+                padding: 0.1rem;
+                background-color: #f2f2f2;
+
+                .wraper {
+                    background-color: #ffffff;
+                }
+
+                .bottom {
+                    display: block;
+                    line-height: 0.4rem;
+                }
+            }
+
+            .title {
+                font-size: 0.14rem;
+                color: #999999;
+                font-weight: normal;
+                border-bottom: none;
+
+                .star {
+                    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'  transform='translate(0, 812) scale(1, -1)'/></svg>");
+                    display: inline-block;
+                    width: 0.9rem;
+                    height: 0.18rem;
+                    vertical-align: middle;
+                    margin-top: 0.05rem;
+                }
+
+                span:nth-child(2) {
+                    float: right;
+                    margin-right: 0.1rem;
+                }
+            }
+
+            .content {
+                padding: 0.1rem;
+                font-size: 0.15rem;
+                line-height: 0.22rem;
+            }
+        }
+    }
+}

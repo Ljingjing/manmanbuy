@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表---手机版</title>
+    <link rel="stylesheet/less" href="./less/prolist.less">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部  开始 -->
+    <header id="header">
+        <a href="index.html" class="icon-logo">
+            <img src="./images/logo.png" alt="">
+        </a>
+        <a href="javascript:void(0);" class="icon-appdownload">
+            <img src="./images/appdownload.png" alt="">
+        </a>
+    </header>
+    <!-- 头部  结束 -->
+    <!-- 搜索框  开始 -->
+    <section id="search">
+        <form action="javascript:void(0);">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <a href="javascript:void(0);">搜索</a>
+        </form>
+    </section>
+    <!-- 搜索框  结束 -->
+
+    <!-- 主体部分  开始 -->
+    <main id="main">
+        <!-- 面包屑导航 -->
+        <div class="breadcrumbcontent">
+            <ol class="breadcrumb">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="category.html" class="getsecondtitle">
+                        大家电</a>
+                </li>
+                <li class="getcategorybyid">
+                    <a href="prolist.html">冰箱</a>
+                </li>
+            </ol>
+            <a class="select">筛选</a>
+        </div>
+
+        <div class="productlist">
+            
+            <ul class="mui-table-view">
+                <img src="./images/logo.jpg" alt="">
+                <!-- <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;">
+                        <img class="mui-media-object mui-pull-left" src="./images/ic_bcj.png">
+                        <div class="mui-media-body">
+                            <div class="tit">海信(Hisense) LED55EC500U 55英寸 4K超高清 智能液晶电视</div>
+                            <div class="price"><em>¥</em>2299</div>
+                            <div class="other">
+                                <div class="mall">5商城报价</div>
+                                <div class="sales">有4163人评论</div>
+                            </div>
+                        </div>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+
+        <!-- 分页  开始 -->
+        <div class="clearfix page">
+            
+            <!-- <div class="pagenav"> -->
+                <span class="w33">
+                    <a href="prolist.html?">上一页</a>
+                </span>
+                <span class="w33">
+                    <select name="select" id="selectPage" selected style="border: 1px solid #bababa; font-size: 16px; padding:8px 15px;height: 36px">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </span>
+                <span class="w33">
+                    <a href="prolist.html?">下一页</a>
+                </span>
+            <!-- </div> -->
+        </div>
+        <!-- 分页  结束 -->
+
+        <!-- 相关链接   开始 -->
+        <div class="rellink">相关链接:<br>
+            <!-- distop.aspx?id=4 -->
+            <a class="numTop" href="javascript:void(0);">电视机十大品牌</a> <br>
+            <a class="numAll" href="javascript:void(0);">电视机口碑大全</a>
+        </div>
+        <!-- 相关链接   结束 -->
+    </main>
+    <!-- 我是商品展示页面 -->
+    <!-- 主体部分  结束 -->
+
+    <!-- 尾部   开始 -->
+    <footer id="footer">
+        <div class="foot_top">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="javascript:$('html,body').scrollTop(0);">
+                <i class="gototop  iconfont icon-dfs13"></i>
+                <span>返回顶部</span>
+            </a>
+        </div>
+        <div class="foot_bottom">
+            <p>
+                <a href="javascript:void(0);" style="color: Red; text-decoration: none;">手机APP下载</a>
+                <a href="http://m.manmanbuy.com">
+                    慢慢买手机版</a> -- 掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+    <!-- 尾部   结束 -->
+
+    <!-- 广告   开始 -->
+    <div class="app-promotion-bar">
+        <a class="closefix" href="javascript:;"></a>
+        <div class="icon"></div>
+        <p class="titlefix">慢慢买</p>
+        <p class="describe">你的随身购物助手！</p>
+        <a class="download-btn" href="javascript:void(0);">立即打开</a>
+    </div>
+    <!-- 广告   结束 -->
+    <script type="text/html" id="getProlistTpl">
+        {{each result value}}
+        <li class="mui-table-view-cell mui-media">
+                <a href="bijia.html?productId={{value.productId}}&productPrice={{value.productPrice}}&productCom={{value.productCom}}">
+                    {{@value.productImg}}
+                    <div class="mui-media-body">
+                        <div class="tit">{{value.productName}}</div>
+                        <div class="price" >{{value.productPrice}}</div>
+                        <div class="other">
+                            <div class="mall">{{value.productQuote}}</div>
+                            <div class="sales">{{value.productCom}}</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <script src="./js/prolist.js"></script>
+</body>
+
+</html>

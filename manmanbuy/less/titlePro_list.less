@@ -1,0 +1,134 @@
+@import "basexu.less";
+html,
+body {
+    max-width: 750px;
+    margin: 0 auto;
+}
+body {
+    padding-top: 0.5rem;
+}
+
+#container {
+    max-width: 7.5rem;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    #back {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        right:10px;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        z-index: 800;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        &.iconfont {
+            font-size: 30px;
+            color: #ff5000;
+        }
+    }
+    #header {
+        height: 0.5rem;
+        max-width: 750px;
+        width: 100%;
+        background-color: #fe4a65;
+        padding: 0.16rem 0.2rem;
+        display: flex;
+        color: #fff;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        .icon-fanhui {
+            width: 0.1rem;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.18rem;
+        }
+        >span {
+            display: inline-block;
+            text-align: center;
+            line-height: 0.18rem;
+            flex: 1;
+            .icon-xiala {
+                font-size: 0.28rem;
+                vertical-align: middle;
+            }
+        }
+        .icon-shouye {
+            font-size: 0.18rem;
+            width: 0.2rem;
+            color: #fff;
+        }
+    }
+    #main {
+        #box {
+            background-color: #faf5f6;
+            >div {
+                &.title {
+                    background-color: #fff;
+                    height: 0.5rem;
+                    >a {
+                        display: block;
+                        text-align: center;
+                        width: 25%;
+                        height: 100%;
+                        float: left;
+                        line-height: 0.5rem;
+                        &.active {
+                            border-bottom: 0.01rem solid #fe4a65;
+                        }
+                    }
+                }
+            }
+            .content {
+                margin-top: 0.1rem;
+                background-color: #fff;
+                display: flex;
+                flex-wrap: wrap;
+                padding-left: 0.07rem;
+                >li {
+                    width: 48%;
+                    float: left;
+                    margin-right: 0.07rem;
+                    margin-bottom: 0.1rem;
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        text-align: center;
+                        >img {
+                            width: 100%;
+                        }
+                        >p {
+                            width: 100%;
+                            font-size: 0.12rem;
+                            margin-top: 0.1rem;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                        >span {
+                            &.money {
+                                font-size: 0.14rem;
+                                float: left;
+                                color: #ff4b5f;
+                                margin-left: 0.1rem;
+                            }
+                            &.brought {
+                                float: right;
+                                color: #ccc;
+                                font-size: 0.12rem;
+                                margin-right: 0.17rem;
+                                >i {
+                                    color: #ecabab;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入阿里字体图标 -->
+    <link rel="stylesheet" href="lib/fontAli/fonts/iconfont.css">
+    <!-- 引入自己的less文件 -->
+    <link rel="stylesheet/less" href="less/couponproduct.less">
+    <!-- 引入less.js -->
+    <script src="lib/less/less.js"></script>
+    <!-- 引入mui的css文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入swiper的css文件 -->
+    <link rel="stylesheet" href="lib/swiper/css/swiper.css">
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header" class="clearfix">
+        <a href="coupon.html" class="iconfont icon-xiangzuo pull-left"></a>
+        <span>肯德基优惠券</span>
+        <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap" class="app pull-right"><img src="https://img.alicdn.com/imgextra/i2/690311/TB2beKvaTXYBeNkHFrdXXciuVXa_!!690311.png"
+                alt=""></a>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <div class="tip">
+            <p>--点餐前出示手机中的优惠券，即可享受优惠--</p>
+        </div>
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;">
+                    <div class="mui-media-body">
+                        <p><span></span></p>
+                        <p class='mui-ellipsis'><span></span><span><i class="iconfont icon-pinglun"></i></span></p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <!-- 遮罩层区域 -->
+        <div class="mask" style="display: none;"> </div>
+        <!--轮播图区域 -->
+        <div class="swiper-container" style="display:none;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+    </main>
+    <!-- 页尾区域 -->
+    <footer id="footer">
+        <div class="backToFront">
+            <a href="index.html"><span>首页>优惠券</span></a>
+        </div>
+        <div class="login-footer clearfix">
+            <a href="login.html" class="pull-left">登录</a>
+            <a href="register.html" class="pull-left">注册</a>
+            <a href="javascript:$('html,body').scrollTop(0);" class="pull-left"><img src="http://www.zuyushop.com/wap/images/top.jpg"
+                    alt="">返回顶部</a>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                <a href="javascript:void(0);" style="color: Red; text-decoration: none;">手机APP下载</a>
+                <a href="http://m.manmanbuy.com">
+                    慢慢买手机版</a> -- 掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+    <!-- 引入优惠券模板 -->
+    <script id="couponProduct" type="text/html">
+        {{each result value key}}
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;">
+            {{@value.couponProductImg}}
+                <div class="mui-media-body">
+                    <p><span>{{value.couponProductName}}</span></p>
+                    <p class='mui-ellipsis'><span>{{value.couponProductPrice}}</span></p>
+                    <p><span>{{value.couponProductTime}}</span></p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <!-- 引入轮播图模板 -->
+    <script id="swiperProduct" type="text/html">
+        {{each result value key}} 
+        <div class="swiper-slide"> {{@value.couponProductImg}}</div>
+             {{/each}}
+    </script>
+    <script src="lib/swiper/js/swiper.js"></script>
+    <!-- 引入zepto文件 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板文件 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 引入mui的js文件 -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 引入自己的js文件 -->
+    <script src="js/couponproduct.js"></script>
+</body>
+
+</html>

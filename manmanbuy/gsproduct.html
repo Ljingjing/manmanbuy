@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>凑单品</title>
+    <link rel="stylesheet" type="text/css" href="css/coudan.css">
+    <script src="lib/less/less.js"></script>
+    <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        function GetRequest(key, value) {
+        value = escape(value);
+        var url = location.search; //获取url中"?"符后的字串 
+        var theRequest;
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            var oldvalue = "";
+            for (var i = 0; i < strs.length; i++) {
+                if (key == strs[i].split("=")[0]) {
+                    oldvalue = strs[i].split("=")[1];
+                    break;
+                }
+            }
+            if (oldvalue == "")
+                theRequest = location.search + "&" + key + "=" + value;
+            else
+                theRequest = location.search.replace(key + "=" + oldvalue, key + "=" + value);
+
+        } else {
+            theRequest = "?" + key + "=" + value;
+        }
+        window.location = theRequest;
+        }
+
+        function search() {
+        var keys = $(".txt").children().val();
+        GetRequest('words', keys);
+        }
+    </script>
+</head>
+<style>
+.Page_loading {
+    margin-top: 15px;
+    text-align: center;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    display: none;
+
+    background-color: #f8f8f8;
+}
+
+.Page_loading em {
+    margin-top: 15px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+</style>
+
+<body>
+    <div class="header-bar border-bottom-img">
+        <div class="inner">
+            <div class="left"> <a href="index.html" class="icon-back"></a> </div>
+            <div class="center">
+                <h1>凑单品</h1>
+            </div>
+            <div class="right"> </div>
+        </div>
+    </div>
+    <div class="coudan-box">
+        <div class="list">
+            <div class="hd">
+                <div class="filter">
+                    <ul>
+                        <li><a href="javascript:;" class="shop">京东<i></i></a></li>
+                        <li><a href="javascript:;" class="area">华北<i></i></a></li>
+                        <li><a href="javascript:;" class="price">全部价格<i></i></a></li>
+                    </ul>
+                </div>
+                <div class="search"> <i class="icon-search"></i></div>
+                <!--各种下拉-->
+                <div class="popsort popbox">
+                    <!-- <ul>
+                        <li class="on"><a href="javascript:GetRequest(&#39;site&#39;, 1);">京东</a></li>
+                    </ul> -->
+                </div>
+                <div class="poparea popbox">
+                   <!--  <ul>
+                        <li class="on"><a href="javascript:GetRequest(&#39;area&#39;, 1)">华北（北京、山西等）</a></li>
+                        <li><a href="javascript:GetRequest(&#39;area&#39;, 2)">华东（山东、浙江等）</a></li>
+                        <li><a href="javascript:GetRequest(&#39;area&#39;, 3)">华南（广东、广西等）</a></li>
+                        <li><a href="javascript:GetRequest(&#39;area&#39;, 4)">华中（湖北、河南等）</a></li>
+                        <li><a href="javascript:GetRequest(&#39;area&#39;, 5)">西南（四川、云南等）</a></li>
+                        <li><a href="javascript:GetRequest(&#39;area&#39;, 6)">东北（辽宁、吉林等）</a></li>
+                        <li><a href="javascript:GetRequest(&#39;area&#39;,7)">西北（宁夏、新疆等）</a></li>
+                    </ul> -->
+                </div>
+                <div class="popcat popbox">
+                    <ul>
+                        <li class="on"><a href="javascript:GetRequest(&#39;money&#39;, 1000);">全部价格</a></li>
+                    </ul>
+                </div>
+                <div class="popsearch border-bottom-img popbox">
+                    <div class="formsch clearfix">
+                        <div class="txt">
+                            <input type="search" value="" oninput="delInput();" class="border-img" placeholder="搜索您想要的凑单品" style="width: 1291px;">
+                            <a href="javascript:;" class="a-delput"></a>
+                        </div>
+                        <div class="smt">
+                            <input type="button" value="搜索" onclick="search()">
+                        </div>
+                    </div>
+                    <div class="select ui-border-b">
+                        <div class="t">排序</div>
+                        <div class="c">
+                            <dl class="clearfix">
+                                <dd class="on"><a href="javascript:GetRequest(&#39;sort&#39;, 0);">销量</a></dd>
+                                <dd><a href="javascript:sortjavascript:GetRequest(&#39;sort&#39;, 1);">价格↑</a></dd>
+                                <dd><a href="javascript:javascript:GetRequest(&#39;sort&#39;, 2);">价格↓</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="select">
+                        <div class="t">分类</div>
+                        <div class="c">
+                            <dl class="clearfix">
+                                <dd class="on">
+                                    <a href="javascript:GetRequest(&#39;cat&#39;, 0)">全部</a></dd>
+                                <dd><a href="javascript:GetRequest(&#39;cat&#39;, 1)">家居</a></dd>
+                                <dd><a href="javascript:GetRequest(&#39;cat&#39;, 2)">数码</a></dd>
+                                <dd><a href="javascript:GetRequest(&#39;cat&#39;, 3)">办公</a></dd>
+                                <dd><a href="javascript:GetRequest(&#39;cat&#39;, 4)">个护</a></dd>
+                                <dd><a href="javascript:GetRequest(&#39;cat&#39;, 5)">食品</a></dd>
+                                <dd><a href="javascript:GetRequest(&#39;cat&#39;, 6)">母婴</a></dd>
+                                <dd><a href="javascript:GetRequest(&#39;cat&#39;, 7)">服饰</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bd">
+                <ul id="container" class="masonry" style="position: relative; height: 0px;">
+                    <li>
+                        <a href="http://item.m.jd.com/ware/view.action?wareId=2222729" class="item border-img">
+                            <div class="pic">
+                                <img src="./images/566fcfb1N7f5affd6.jpg">
+                            </div>
+                            <div class="title">陈克明 面条 鸡蛋龙须挂面 细面条 150g</div>
+                            <div class="other">
+                                <div class="price">
+                                    <em>￥</em>1.00</div>
+                                <div class="btn">去凑单</div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="Page_loading">
+            <em>
+                <img src="./images/loading.gif" width="32" height="32"></em><span></span>
+        </div>
+    </div>
+</body>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/coudan.js"></script>
+<script type="text/html" id="gsShop">
+    <ul>
+        {{ each result value }}
+        <li class="">
+            <a href="javascript:getShopProduct('shopid', {{value.shopId}},'{{value.shopName}}');" data-shopid="{{value.shopId}}">{{value.shopName}}
+                    <i></i>
+                </a>
+        </li>
+        {{ /each }}
+    </ul>
+</script>
+<script type="text/html" id="gsarea">
+    <ul>
+        {{each result value}}
+        <li class="">
+            <a href="javascript:getAreaProduct('areaid', {{value.areaId}},'{{value.areaName.split('（')[0]}}');" data-areaid={{value.areaId}}>{{value.areaName}}
+                </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<script type="text/html" id="gsProductList">
+    <ul id="container" class="masonry" style="position: relative; height: 0px;">
+        {{each result value}}
+        <li>
+            <a href="http://item.m.jd.com/ware/view.action?wareId=1274360" class="item border-img">
+                <div class="pic">
+                    <img src="{{value.productImg}}" style="width: 174px; height: 174px;">
+                </div>
+                <div class="title">{{value.productName}}</div>
+                <div class="other">
+                    <div class="price"><em>¥</em>{{value.productPrice}}</div>
+                    <div class="btn">去凑单</div>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+    <div class="clearfix"></div>
+</script>
+<script type="text/javascript">
+    
+    
+    function getShopProduct(select, shopid, shopname) {
+        $('.shop').html(shopname + "<i></i>");
+        $('.shop').attr('data-id', shopid);
+        $('[data-' + select + ']').parent().removeClass('on');
+        $('[data-' + select + '=' + shopid + ']').parent().addClass('on');
+        $('[data-' + select + '=' + shopid + ']').parent().parent().parent().removeClass('on');
+        var areaid = $('.filter').find('.area').data('id');
+        gsProductList({ "shopid": shopid, "areaid": areaid });
+    }
+    
+    function getAreaProduct(select, areaid, areaname) {
+        $('.area').html(areaname + "<i></i>");
+        $('.area').attr('data-id', areaid);
+        $('[data-' + select + ']').parent().removeClass('on');
+        $('[data-' + select + '=' + areaid + ']').parent().addClass('on');
+        $('[data-' + select + '=' + areaid + ']').parent().parent().parent().removeClass('on');
+        var shopid = $('.filter').find('.shop').data('id');
+        gsProductList({ "shopid": shopid, "areaid": areaid });
+    }
+</script>
+
+</html>

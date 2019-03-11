@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 导入mui.css文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 导入字体css文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/alifont3/iconfont.css">
+    <link rel="stylesheet" href="lib/alifont2/iconfont.css">
+    
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
+    <!-- 导入自己写的less文件 -->
+    <link rel="stylesheet/less" href="less/titlePro_list.less">
+    <!-- 导入less.js编译器文件 -->
+    <script src="lib/less/less.js"></script>
+    <script>
+        // 实现font-size的变化适配不同的屏幕
+        // 指定一个标准屏幕大小 例如375px  指定一个根元素字体大小 例如100px
+        // 比例相等 标准屏幕大小/指定根元素字体大小 = 屏幕大小/根元素字体大小
+        fontSize();
+        window.addEventListener('resize',fontSize);
+        // 使得拉伸屏幕宽度也能够自适应, 封装成函数  resize事件调用一次,正常调用一次
+        function fontSize(){
+
+            // 获取到当前屏幕的大小
+            var winWidth=document.documentElement.offsetWidth;
+            // 求出当前应该设置的根元素字体大小
+            var htmlFontSize=winWidth/3.75;
+            // 设置根元素字体大小
+            document.querySelector('html').style.fontSize=htmlFontSize+"px";
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <a href="#box" id="back" class="iconfont icon-jiantouarrow499">
+        </a>
+        <header id="header">
+            <a href="baicaijia.html" class="iconfont icon-fanhui"></a>
+            <span> <i class="topTitle"></i><i class="iconfont icon-xiala"></i></span>
+            <a href="baicaijia.html" class="iconfont icon-shouye"></a>
+        </header>
+        <div id="table_list">
+            <div class="mui-row">
+                <div class="mui-col-xs-3">
+                    <a href="#">热销</a>
+                </div>
+                <div class="mui-col-xs-3">
+                    <a href="#">热销</a>
+                </div>
+                <div class="mui-col-xs-3">
+                    <a href="#">热销</a>
+                </div>
+                <div class="mui-col-xs-3">
+                    <a href="#">热销</a>
+                </div>
+                <div class="mui-col-xs-3">
+                    <a href="#">热销</a>
+                </div>
+                <div class="mui-col-xs-3">
+                    <a href="#">热销</a>
+                </div>
+                <div class="mui-col-xs-3">
+                    <a href="#">热销</a>
+                </div>
+            </div>
+            <a href="#" class="category_close">收起分类</a>
+        </div>
+        <main id="main">
+            <div id="box">
+                <div class="title">
+                    <a href="javascript:;" class="active">人气</a>
+                    <a href="javascript:;">最新</a>
+                    <a href="javascript:;">销量</a>
+                    <a href="javascript:;">价格</a>
+                </div>
+                <ul class="content">
+                    <li>
+                        <a href="#">
+                            <img class="test-lazyload" src="images/loading-02.gif">
+                            <p>《photoshop cs6从入门到精通》</p>
+                            <span class="money">￥24.08</span>
+                            <span class="brought"><i>435</i>人已买</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="test-lazyload" src="images/loading-02.gif">
+                            <p>《photoshop cs6从入门到精通》</p>
+                            <span class="money">￥24.08</span>
+                            <span class="brought"><i>435</i>人已买</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="test-lazyload" src="images/loading-02.gif">
+                            <p>《photoshop cs6从入门到精通》</p>
+                            <span class="money">￥24.08</span>
+                            <span class="brought"><i>435</i>人已买</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="test-lazyload" src="images/loading-02.gif">
+                            <p>《photoshop cs6从入门到精通》</p>
+                            <span class="money">￥24.08</span>
+                            <span class="brought"><i>435</i>人已买</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="test-lazyload" src="images/loading-02.gif">
+                            <p>《photoshop cs6从入门到精通》</p>
+                            <span class="money">￥24.08</span>
+                            <span class="brought"><i>435</i>人已买</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <!-- 创建标题切换商品信息模板 -->
+    <script type="text/html" id="hotPro-tpl">
+        <% for(var i = 5; i < result.length; i++){ %>
+       <li>
+           <a href="goodsDetails.html?id={{result[i].productId}}"> 
+               <img class="test-lazyload" src="images/loading-02.gif"
+                data-original="{{result[i].productImg.slice(result[i].productImg.indexOf('=')+2).replace('\">','')}}"> 
+               <p>{{result[i].productName.replace(result[i].productName.slice(0,result[i].productName.indexOf("</span>")+7),"")}}</p>
+               <span class="money">￥ <i>{{result[i].productPrice.replace(result[i].productPrice.slice(0,result[i].productPrice.indexOf("<del>")+6),"").replace("</del>","")}}</i></span>
+               <span class="brought"><i>{{result[i].productCouponRemain.replace(result[i].productCouponRemain.slice(0,result[i].productCouponRemain.indexOf("已")+2),"").replace("张</b></div>","")}}</i>人已买</span>
+           </a>
+       </li> 
+       <% }%>
+   </script>
+
+    <!-- 创建分类标题模板 -->
+    <script type="text/html" id="getTitle-tpl">
+        {{each result value}}
+        <div class="mui-col-xs-3">
+            <a href="titlePro_list.html?id={{value.titleId}}" >{{value.title}}</a>
+        </div>
+    {{/each}}
+</script>
+
+</body>
+<!-- 导入zepto.js文件 -->
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/alifont2/iconfont.js"></script>
+<script src="lib/alifont3/iconfont.js"></script>
+
+<!-- 导入mui.js文件 -->
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/swiper/js/swiper.min.js"></script>
+<!-- 导入模板引擎js文件 -->
+
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/zepto/picLazyLoad.js"></script>
+
+<!-- 导入自己写的js文件 -->
+
+<script src="js/titlePro_list.js"></script>
+
+</html>

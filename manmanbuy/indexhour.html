@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Time table</title>
+    <!-- 1.引入ui样式包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 2.引入字体图标包 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.引入less预编译包 -->
+    <link rel="stylesheet/less" href="less/indexhour.less">
+    <!-- 4.引入less编译文件 -->
+    <script src="lib/less/less.js"></script>
+    
+
+
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div id="header-t">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="http://static.manmanbuy.com/m/img/mlogo.png" alt="">
+                </a>
+            </div>
+            <div class="mui-input-row mui-search">
+                <input type="search" class="mui-input-clear" placeholder="搜索商品比价">
+            </div>
+            <div id="download">
+                <a href="index.html">
+                    下载
+                </a>
+            </div>
+        </div>
+        <!-- 头部区域2 -->
+        <nav id="header-b">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="getmoneyctrl-ly.html">省钱控</a></li>
+                <li><a href="category.html">比价搜索</a></li>
+                <li><a href="inlanddiscount.html">国内折扣</a></li>
+                <li><a href="history.html">查询史价</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主体区域 -->
+    <p class="tips">国内折扣热度排行榜-8点档</p>
+    <main id="main">
+
+    </main>
+
+    
+    <footer id="footer">
+        <button id="btn1">上一页</button>
+        <button id="btn2">下一页</button>   
+    </footer>
+
+
+
+
+
+    <!-- 5.引入类似于JQ的包 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 6.引入MUI的js -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 7.引入模板引擎 web版本的-->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 8.引入自身的js -->
+    <!-- <script src="js/index.js"></script> -->
+</body>
+
+<!-- 模板1 -->
+<script type="text/html" id="muban">
+    <!-- 这是拿到数据是数组值 -->
+    {{ each list values}}
+    <!-- data是给他增加一个ID的显示的意思 -->
+    <div class="content" data-id="{{ values.productId}}">
+        <div class="content-left">
+            {{@values.productImgSm}}
+            <div id="ranking">
+                No.{{values.productId-19}}
+            </div>
+        </div>         
+        <div class="content-right"> 
+            <div class="content-right-t">
+                <span>{{values.productName}}</span>
+                <p>{{values.productPinkage}}</p>
+            </div>        
+            <div class="content-right-b">
+                <p>{{values.productFrom}}</p>
+            </div> 
+        </div>
+    </div>
+    {{/each}}
+
+</script>
+
+
+
+
+<!-- 请求数据 -->
+<script>
+    var btn1 = document.getElementById('btn1');
+    var btn2 = document.getElementById('btn2');
+    var index = 0;
+
+    muban(index)
+    btn1.onclick = function(){
+        if(index<=0){
+            return false;
+        }else{
+            index--;  
+            document.querySelector("main").innerHTML="";
+            muban(index)        
+        }
+
+    }
+    
+
+    btn2.onclick = function(){
+        if(index>=14){
+            return false;
+        }else{
+            index++;
+            document.querySelector("main").innerHTML="";
+            muban(index)
+        }
+    }
+
+    
+    
+
+
+    
+
+    function muban(index) {
+        $.ajax({
+            //请求地址
+            url: "http://localhost:9090/api/getmoneyctrl",
+            //传参数据
+            data: {
+                pageid: index
+            },
+            //返回的数据类型
+            dataType: "json",
+            success: function (data) {
+                //这是渲染的...*****求深入
+                console.log(data)
+                var html = template("muban", {
+                    list: data.result
+                });
+                //渲染在她的后面
+                $("#main").append(html)
+
+                // $(".content").click(function(this){
+                // //window.location = "./commodity.html";
+                //     console.log(this);
+                // })
+                // 这里是先是补充DATE渲染到ID值,
+                // 然后根据ID值,拿到给网址后面去,
+                $('#main').on("click", "div.content", function () {
+                    // console.log($(this).data("id"))
+                    var id = $(this).data("id");
+                    //跳转页然后拼接上面的ID
+                    window.location = "./commodity.html?id=" + id;
+
+                })
+            }
+        })
+    }
+
+
+
+
+    //待续....
+</script>
+
+
+<!-- 商品渲染完之后,先去看接口文档,
+里面有需要传送的什么ID之类的,
+注意是哪个的ID,是商品的还是谁的
+我要点击是谁的,就要获取到谁的ID
+ 
+通过URL字符串拼接传参,传到详情页面那里去
+然后在详情页面截取他传过来的ID数值,
+然后通过ID的数值掉借口数据,
+并且渲染数据,即可.
+-->
+
+<!-- 待解决
+1.底部解决
+2.分页解决
+3.返回数据的下标,渲染NO榜
+
+
+-->
+
+
+
+
+
+
+
+
+
+</html>

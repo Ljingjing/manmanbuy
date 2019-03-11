@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情页面</title>
+    <link rel="stylesheet/less" href="./less/bijia.less">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部广告  开始 -->
+    <div class="appbanner" id="Div1">
+        <div class="applogo">
+            <img src="./images/logo.jpg">
+        </div>
+        <div class="tit">
+            慢慢买比价客户端
+            <div class="subtit">
+                <p>掌控价格不再买贵</p>
+                <p>500万人正在使用</p>
+            </div>
+        </div>
+        <div class="btn">
+            <a href="javascript:;" class="a-close"></a>
+            <a href="javascript:;" onclick="trackEvent('Mobile下载');" class="a-install">立即安装</a>
+        </div>
+    </div>
+    <!-- 头部广告  结束 -->
+
+    <!-- 头部  开始 -->
+    <header id="header">
+        <a href="index.html" class="icon-logo">
+            <img src="./images/logo.png" alt="">
+        </a>
+        <a href="javascript:void(0);" class="icon-appdownload">
+            <img src="./images/appdownload.png" alt="">
+        </a>
+    </header>
+    <!-- 头部  结束 -->
+    <!-- 搜索框  开始 -->
+    <section id="search">
+        <form action="javascript:void(0);">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <a href="javascript:void(0);">搜索</a>
+        </form>
+    </section>
+    <!-- 搜索框  结束 -->
+    <!-- 主体部分  开始 -->
+    <main id="main">
+        <div class="nav">
+        </div>
+        <div class="detail-head ui-border-b">
+            <div class="pic">
+                <!-- <img src="http://pro-img.zuyushop.com/ProPic/20178/Thumb/Thumb_2017080009360474424.jpg"> -->
+                <a href="javascript:;" class="a-fav">
+                    <img src="http://www.zuyushop.com/wap/images/sc.jpg" width="39" height="39"></a>
+            </div>
+            <div class="tit">海信(Hisense) LED55EC750US 55英寸 4K超高清 HDR智能智慧语音液晶电视<span></span>
+            </div>
+            <div class="inf clearfix" style="padding-bottom:20px;">
+                <ul>
+                    <li class="price"><span>当前最低</span><em>:&nbsp;<i>¥3098.00 </i></em></li>
+
+                    <li class="comment"><span>优选评论</span><em>:&nbsp;<i>3651</i>条</em></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab">
+            <ul>
+                <li class="cur"><a href="javascript:void(0);">比价购买</a></li>
+                <li class="mtab ">
+                    <a href="javascript:void(0);">产品参数</a></li>
+                <li class=""><a href="javascript:void(0);">优选评价</a></li>
+            </ul>
+        </div>
+        <div class="tab_ar">
+            <li>
+                <img src="http://www.zuyushop.com/wap/images/tab_ar.png" width="8" height="5">
+            </li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+        </div>
+        <div class="plist">
+            <a href="javascript:void(0);"></a>
+            <!-- <ul>
+                <li class="ui-border-b clearfix l">
+                    <a href="http://tool.manmanbuy.com/m/disSitePro.aspx?c_from=bijiaaspx&amp;url=https://product.suning.com/0000000000/659973806.html"
+                        class="go">
+                    </a>
+                    <div class="mall">
+                        <img src="http://sf.manmanbuy.com/images/sitelogo/6.png">苏宁易购<br> <span class="zydsf">自营</span>
+                    </div>
+                    <div class="inf">
+                        <span class="price">
+                            <em>¥</em>3399.00
+                        </span>
+                    </div>
+                    <span class="glyphicon glyphicon-menu-right more"></span>
+                </li>
+            </ul> -->
+
+            <!-- <div class="lower">
+                <a href="javascript:void(0);">该商品的历史最低价：2899.00 &nbsp; &gt;</a>
+            </div> -->
+            <div class="note">
+                * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+            </div>
+        </div>
+        <div class="pj_t">
+            <div>优选网友评价</div>
+        </div>
+        <div class="pj_list">
+            <script type="text/html" id="getproductcomTpl">
+                {{each result value}}
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td class="name" align="left">{{value.comName}}</td>
+                            <td align="right">{{value.comTime}}</td>
+                            </tr>
+                        <tr>
+                            <!-- <td align="left">
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                            </td> -->
+                            <td colspan="2" style="text-align:right">{{value.comFrom}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="pj_C">{{value.comContent}}</td>
+                        </tr>
+                        <!-- <tr>
+                            <td colspan="2" class="pj_C"><a href="discomment.aspx?id=565527&amp;cid=43497707" style="font-size:12px; color:#999;">回复</a>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                {{/each}}
+            </script>
+        </div>
+        <div class="more">
+            <a class="morein" href="javascript:void(0);">查看更多评价</a></div>
+    </main>
+    <!-- 主体部分  结束 -->
+
+    <!-- 慢慢买APP 开始 -->
+    <div class="appbanner  appbannerc" id="Div2">
+        <div class="applogo">
+            <img src="./images/logo.jpg"></div>
+        <div class="tit">
+            慢慢买APP
+            <div class="subtit" style="">
+                <p>给喜欢网购的同学推荐下[慢慢买]这个APP，第一时间更新国内外的优惠信息！</p>
+            </div>
+        </div>
+        <div class="btn">
+            <a href="javascript:void(0);" class="a-install">立即打开</a>
+        </div>
+    </div>
+    <!-- 慢慢买APP 结束 -->
+    <!-- 尾部   开始 -->
+    <footer id="footer">
+        <div class="foot_top">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="javascript:$('html,body').scrollTop(0);">
+                <i class="gototop  iconfont icon-dfs13"></i>
+                <span>返回顶部</span>
+            </a>
+        </div>
+        <div class="foot_bottom">
+            <p>
+                <a href="javascript:void(0);" style="color: Red; text-decoration: none;">手机APP下载</a>
+                <a href="http://m.manmanbuy.com">
+                    慢慢买手机版</a> -- 掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+    <!-- 尾部   结束 -->
+
+
+
+    <!-- 广告   开始 -->
+    <div class="app-promotion-bar">
+        <a class="closefix" href="javascript:;"></a>
+        <div class="icon"></div>
+        <p class="titlefix">全网比价查折扣</p>
+        <p class="describe">去APP领券更划算</p>
+        <a class="download-btn" href="javascript:void(0);">立即打开</a>
+    </div>
+    <!-- 广告   结束 -->
+    <script src="./lib/jquery/jquery.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <script src="./js/bijia.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+// 定义公共变量
+@main-color:#ff841d;
+@border-color:#e6e6e6;
+@a-color:#666;
+
+html {
+    font-size: 100px;
+}
+
+// 初始化样式
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+a{
+    text-decoration: none;
+    color:@a-color;
+}
+img{
+    vertical-align: middle;
+}
+li{
+    list-style: none;
+}
+i{
+    font-style: normal;
+}
+input{
+    border:0;
+}
+// html,body{
+//     height: 100%;
+//     position: relative;
+// }
+// .swiper-container{
+//     height: 100%;
+//     .swiper-wrapper{
+//         .swiper-slide{
+//             height: auto;
+//         }
+//     }
+// }
+
+// 公共样式
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+
+.border-left{
+    border-left:1px solid @border-color;
+}
+.border-right{
+    border-right:1px solid @border-color;
+}
+.border-top{
+    border-top:1px solid @border-color;
+}
+.border-right{
+    border-right:1px solid @border-color;
+}
+html{
+    // position: relative;
+}
+body{
+    // max-width: 750px;
+    // margin: 0 auto;
+    background-color: #fff;
+    // position: absolute;
+    // top:0px;
+    // left:50%;
+    //也可以缩小100倍写0.16rem
+    font-size: 0.16rem;
+    // transform: translateX(-50%);
+}
+.clearfix {
+    zoom: 1;
+}
+em{
+    font-style: normal;
+}
+
+.clearfix:after {
+    content: ' ';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+// 网页头部
+#header{
+    height: 50px;
+    line-height: 50px;
+    background-color: @main-color;
+    border-bottom: 1px solid @border-color;
+    padding: 0px 10px 0px 20px;
+    display: flex;
+    // position: fixed;
+    // top:0px;
+    >.icon-logo{
+        flex: 1;
+        display: block;
+        >img{
+            max-width: 185px;
+            max-height: 25px;
+            overflow: hidden;
+        }
+    }
+    >.icon-appdownload{
+        display: block;
+        >img{
+            max-height: 34px;
+            overflow: hidden;
+        }
+    }
+}
+
+// 搜索框
+#search{
+    height: 50px;
+    padding: 10px;
+    border-bottom: 1px solid @border-color;
+    background-color: #fff;
+    >form{
+        display: flex;
+        position: relative;
+        >input{
+            flex: 1;
+            height: 30px;
+            border-radius: 15px;
+            background: #f1f1f1;
+            text-align: left;
+            padding-left: 5%!important;
+            font-size: 16px;
+        }
+        >a{
+            width: 63px;
+            height: 30px;
+            line-height: 30px;
+            display: block;
+            color: #fff;
+            text-align: center;
+            border-radius: 15px;
+            background: @main-color;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            font-size: 16px;
+        }
+    }
+}
+
+
+// 尾部  开始
+#footer{
+    .foot_top{
+        // margin-top: 10px;
+        background: #efefef;
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        height: 36px;
+        // line-height: 34px;
+        clear: both;
+        >a{
+            color: #666;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            float: left;
+            height: 34px;
+            line-height: 34px;
+            font-size: 14px;
+            border-right: 1px solid #c4c4c4;
+            text-align: center;
+            width: 30%;
+            box-sizing: border-box;
+            &:last-of-type{
+                width: 40%;
+                border: 0;
+                >.gototop{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .foot_bottom{
+        background: #efefef;
+        text-align: center;
+        font-size: 12px;
+        padding: 15px 0;
+        color: #666;
+        >p{
+            margin-bottom: 0;
+            &:first-of-type{
+                line-height: 16px;
+                >a{
+                    color: #666;
+                    display: inline-block;
+                }
+            }
+            &:last-of-type{
+                line-height: 14px;
+            }
+        }
+    }
+    .foot_fixed{
+        position: fixed;
+        right: 0px;
+        bottom: 10px;
+        height: 116px;
+        z-index:999;
+        >a{
+            display: block;
+            color: #666;
+            &:first-of-type{
+                >img{
+                    width: 64px;
+                }
+            }
+            &:last-of-type{
+                width: 34px;
+                height: 34px;
+                margin-left: 18px;
+                margin-top: 5px;
+                border-radius: 50%;
+                display: block;
+                text-align: center;
+                line-height: 34px;
+                background-color: #ffffff;
+                border: 1px solid @border-color;
+                >.gotop{
+                    width: 22px;
+                    height: 22px;
+                    font-size: 26px;
+                 }
+            }
+        }
+    }
+}
+
+.app-promotion-bar {
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: #faf8f5; // transition: opacity .2s ease-out;
+    >.closefix {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 21px;
+        height: 21px;
+        margin: -13px 10px 10px;
+        background-image: url(../images/close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 21px;
+        opacity: 1;
+    }
+    >.icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 12px;
+        width: 41px;
+        height: 41px;
+        margin: auto;
+        background-image: url(../images/logo.jpg);
+        background-position: center;
+        background-size: 41px;
+    }
+    >.titlefix {
+        margin-top: 12px;
+        margin-bottom: 0;
+        font-size: 18px;
+        color: #888;
+    }
+    >.titlefix,
+    .describe {
+        margin-left: 67px;
+        margin-right: 84px;
+        line-height: 1;
+    }
+    >.describe {
+        margin-top: 3px;
+        font-size: 14px;
+        color: #999;
+    }
+    >.download-btn {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        bottom: 0;
+        width: 74px;
+        height: 32px;
+        padding-top: 10px;
+        margin: auto;
+        font-size: 13px;
+        line-height: 1;
+        text-align: center;
+        color: #fff;
+        background-color: #ff7700;
+        border-radius: 4px;
+        box-shadow: inset 0 -2px #ff5500;
+        text-decoration: none;
+    }
+}

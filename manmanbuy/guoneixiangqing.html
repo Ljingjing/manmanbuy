@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣详情页</title>
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.css">
+    <link rel="stylesheet" href="./lib/font/iconfont.css">
+    <link rel="stylesheet/less" href="./less/guoneixiangqing.less">
+    <script src="./lib/less/less.js"></script>
+
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="header-search">
+            <a href="index.html" class="logo">
+                <img src="./images/mlogo.png" alt="">
+            </a>
+            <form action="#">
+                <i class="iconfont icon-icon-"></i>
+                <input type="search" class="search" placeholder="请输入搜索商品">
+            </form>
+            <a href="https://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">
+                <span>下载</span>
+            </a>
+        </div>
+        <div class="header-nav">
+            <!-- 滚动大容器 -->
+            <div class="swiper-container">
+                <!-- 所有滚动的内容的容器 图片容器 -->
+                <div class="swiper-wrapper">
+                    <!-- 每个一个滚动项容器 每个轮播图项 -->
+                    <div class="swiper-slide">
+                        <!-- 在里面放真实要滚动的ul -->
+                        <ul>
+                                <li>
+                                    <a href="index.html">首页</a>
+                                </li>
+                                <li>
+                                    <a href="moneyctrl.html">省钱控</a>
+                                </li>
+                                <li>
+                                    <a href="category.html">比价搜索</a>
+                                </li>
+                                <li class="active">
+                                    <a href="inlanddiscount.html">国内折扣</a>
+                                </li>
+                                <li>
+                                    <a href="history.html">查历史价</a>
+                                </li>
+                                <li>
+                                    <a href="baicaijia.html">白菜价</a>
+                                </li>
+                                <li>
+                                    <a href="indexhour.html">小时风云榜</a>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 主体商品详情区域 -->
+    <main id="main">
+        <div class="container">
+            <form action="#">
+                <h3 class="title">
+                    东大韩金 蜂蜜柚子茶 238g*4瓶
+                </h3>
+                <h4 class="price">27.9元包邮</h4>
+                <div class="info">
+                    <span class="mall">
+                        天猫商城</span> <span class="addtime" style="margin-right: 4px;">
+                        09-29 08:40</span> <span class="author">
+                        小棒好
+                        / 慢慢买</span>
+                </div>
+                <div class="content">
+                        <p>东大韩金 蜂蜜柚子茶 238g*4瓶，真材实料好味道，严选原料，酸甜口感，
+                            果香四溢维C美白，大片果肉，原滋原味，鲜爽可口，营养价值高，老少皆宜的美食良品！</p>
+                        <img src="http://wnzk-img.zuyushop.com/r_img/img/20180929/08/363eb430a7d340579bc2936ae66df998.jpg"
+                            alt="">
+                </div>
+                <p class="discounts">
+                    <a href="javascript:void(0);">天猫有商家</a>报价37.9元，
+                    <a href="javascript:void(0);">可用10元券</a>，实付27.9元包邮，月销量1947件，评价4.8分。
+                </p>
+                <a href="javascript:void(0);" class="buy">前往购买</a>
+            </form>
+        </div>
+    </main>
+
+    <!-- 底部登录注册区域 -->
+    <footer id="footer">
+        <div class="upload">
+            <p>标签:
+                <a href="javascript:void(0);">擦玻璃器,</a>
+                <a href="javascript:void(0);">双面擦</a>
+            </p>
+        </div>
+        <div class="location clearfix">
+            <a href="index.html">首页</a>&nbsp;&gt;&nbsp;
+            <a href="inlanddiscount.html">超值推荐</a>&nbsp;&gt;&nbsp;
+            <span>东大韩金 蜂蜜柚子茶 2...</span>
+
+        </div>
+        <div class="service">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="javascript:$('html,body').scrollTop(0);">
+                    <i class="up">
+                        <img src="./images/top.jpg" alt="">
+                    </i>返回顶部
+                </a>
+            
+        </div>
+        <div class="download">
+            <p>
+                <a href="https://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">手机APP下载</a>
+                <span>慢慢买手机版</span>
+                <i>--掌上比价平台</i>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 准备模板 -->
+    <script type="text/html" id="detailTpl">
+        {{ each result value }}
+        <h3 class="title">
+                {{ value.productName }}
+            </h3>
+            <h4 class="price">{{ value.productPrice }}包邮</h4>
+            <div class="info">
+                <span class="mall">
+                    {{ value.productFrom }}</span> <span class="addtime" style="margin-right: 4px;">
+                    {{ value.productTime }}</span> <span class="author">
+                    {{ value.productTips }}</span>
+            </div>
+            <div class="content clearfix">
+                    <p>{{ value.productInfo }}</p>
+                    {{@value.productImg }}
+            </div>
+            <p class="discounts">
+                <a href="javascript:void(0);">天猫有商家</a>报价{{ value.productPrice+10 }}，
+               实付{{ value.productPrice }}包邮，月销量1947件，评价4.8分。
+            </p>
+              <a href="javascript:void(0);" class="buy">前往购买</a>
+            {{ /each }}
+    </script>
+    <!-- 准备导向模板 -->
+    <script type="text/html" id="locationTpl">
+        {{ each result value }}
+        <a href="index.html">首页&nbsp;&gt;&nbsp;</a>
+        <a href="inlanddiscount.html">超值推荐&nbsp;&gt;&nbsp;</a>
+        <span>{{ value.productName }}</span>
+        {{ /each }}
+    </script>
+
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/swiper/js/swiper.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/guoneixiangqing.js"></script>
+</body>
+
+</html>

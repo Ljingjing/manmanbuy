@@ -1,0 +1,106 @@
+@main-color: #ff841d;
+@border-color: #ccc;
+@a-color: #666;
+
+html {
+    font-size: 1rem;
+}
+
+body {
+    //也可以缩小100倍写0.16rem
+    font-size: 0.16rem;
+}
+
+
+/* 样式重置 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /*在移动端设置盒模型border-box 为了防止元素加边框或者padding出现水平滚动条*/
+    box-sizing: border-box;
+    /* 去除移动端按住元素的时候会出现高亮背景色 */
+    -webkit-tap-highlight-color: transparent;
+    /* 去掉所有移动端内边框 */
+    outline: none;
+}
+
+a {
+    color: @a-color;
+    text-decoration: none;
+}
+
+em {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    border: 0;
+    outline: none;
+}
+
+img {
+    /* 解决图片底部3px的间隙 为了让图片的对齐方式和文本一致*/
+    vertical-align: middle;
+}
+
+i {
+    font-style: normal;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+
+
+// 菜单列表
+
+#table_list {
+    background-color: #fff;
+    padding-bottom: 0.05rem;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 900;
+    display: none;
+    width: 100%;
+    .mui-col-xs-3 {
+        height: 0.5rem;
+        text-align: center;
+        line-height: 0.3rem;
+        border: 0.01rem solid #eee;
+        border-left: 0;
+        border-top: 0;
+        >a {
+            display: block;
+            // padding: 0.1rem 0.3rem;
+            width: 100%;
+            height: 100%;
+            line-height: 0.5rem;
+            
+        }
+    }
+    >a {
+        display: block;
+        text-align: center;
+        width: 1.2rem;
+        height: 0.25rem;
+        line-height: 0.25rem;
+        border: 0.01rem solid #ff7f90;
+        color: #ff7f90;
+        margin: 0.4rem auto;
+    }
+
+
+
+   
+}

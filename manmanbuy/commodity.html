@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 1.引入ui样式包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 2.引入字体图标包 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.引入less预编译包 -->
+    <link rel="stylesheet/less" href="less/commodity.less">
+    <!-- 4.引入less编译文件 -->
+    <script src="lib/less/less.js"></script>
+
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div id="header-t">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="http://static.manmanbuy.com/m/img/mlogo.png" alt="">
+                </a>
+            </div>
+            <div class="mui-input-row mui-search">
+                <input type="search" class="mui-input-clear" placeholder="搜索商品比价">
+            </div>
+            <div id="download">
+                <a href="index.html">
+                    下载
+                </a>
+            </div>
+        </div>
+        <!-- 头部区域2 -->
+        <nav id="header-b">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="getmoneyctrl-ly.html">省钱控</a></li>
+                <li><a href="category.html">比价搜索</a></li>
+                <li><a href="inlanddiscount.html">国内折扣</a></li>
+                <li><a href="history.html">查询史价</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主题区域 -->
+    <main id="main">
+
+    </main>
+
+
+    <script type="text/html" id="muban">
+
+        {{ each list values}}
+
+        
+        {{@values.productImg2}}
+        <p id="comment">&nbsp;&nbsp;&nbsp;&nbsp;{{@values.productComCount}}</p>
+        <br>
+        <span>{{values.productFrom}}|</span>
+        <span>{{values.productTime}}|</span>
+        <span>{{values.productTips}}</span>
+        <h4>{{values.productName}}</h4>
+        <p id="expressage">{{values.productPinkage}}</p>
+        <button type="button" class="mui-btn mui-btn-warning">点击购买</button>
+        <div id="content">            
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{values.productInfo2}}
+        <br>
+        <br>
+        <br>
+        </div>
+    
+        {{/each}}
+    </script>
+
+
+    <!-- <script>
+            //这是获取到链接,存起来
+            var url = window.location.href
+            // console.log(url);
+            //然后截取=号后面的数字,也就是ID的意思
+            var id = url.split("=");
+            // console.log(id[1])
+    
+            $.ajax({
+                //请求地址
+                url: "http://localhost:9090/api/getmoneyctrlproduct",
+                //传参数据
+                data: {
+                    productid: id[1],
+                },
+                //返回的数据类型
+                dataType: "json",
+    
+                //这是回调函数,就是返回数据
+                success:function(res){
+                    //console.log(res)
+    
+                var html = template("muban",{list:res.result});
+                    $("#main").append(html)
+                    //无力吐槽自己写的代码....
+                }
+            })
+
+
+
+        </script> -->
+
+
+
+    <!-- 5.引入类似于JQ的包 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 6.引入MUI的js -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 7.引入模板引擎 web版本的-->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 8.引入自身的js -->
+    <!-- <script src="js/index.js"></script> -->
+    <script>
+        //这是获取到链接,存起来
+        var url = window.location.href
+        // console.log(url);
+        //然后截取=号后面的数字,也就是ID的意思
+        var id = url.split("=");
+        // console.log(id[1])
+
+        $.ajax({
+            //请求地址
+            url: "http://localhost:9090/api/getmoneyctrlproduct",
+            //传参数据
+            data: {
+                productid: id[1],
+            },
+            //返回的数据类型
+            dataType: "json",
+
+            //这是回调函数,就是返回数据
+            success: function (res) {
+                //console.log(res)
+
+                var html = template("muban", {
+                    list: res.result
+                });
+                $("#main").append(html)
+                //无力吐槽自己写的代码....
+            }
+        })
+    </script>
+</body>
+
+</html>

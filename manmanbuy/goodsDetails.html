@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 导入字体css文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/alifont/iconfont.css">
+    <link rel="stylesheet" href="lib/alifont2/iconfont.css">
+    <link rel="stylesheet" href="lib/alifont3/iconfont.css">
+    <!-- 导入自己写的less文件 -->
+    <link rel="stylesheet/less" href="less/goodsDetails.less">
+    <!-- 导入less.js编译器文件 -->
+    <script src="lib/less/less.js"></script>
+    <title>Document</title>
+    <script>
+        // 实现font-size的变化适配不同的屏幕
+        // 指定一个标准屏幕大小 例如375px  指定一个根元素字体大小 例如100px
+        // 比例相等 标准屏幕大小/指定根元素字体大小 = 屏幕大小/根元素字体大小
+        fontSize();
+        window.addEventListener('resize',fontSize);
+        // 使得拉伸屏幕宽度也能够自适应, 封装成函数  resize事件调用一次,正常调用一次
+        function fontSize(){
+
+            // 获取到当前屏幕的大小
+            var winWidth=document.documentElement.offsetWidth;
+            // 求出当前应该设置的根元素字体大小
+            var htmlFontSize=winWidth/3.75;
+            // 设置根元素字体大小
+            document.querySelector('html').style.fontSize=htmlFontSize+"px";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <a href="#banner" id="back" class="iconfont icon-jiantouarrow499">
+        </a>
+        <header id="header">
+            <div class="startHead">
+                <a href="baicaijia.html" class="iconfont icon-fanhui"></a>
+                <a href="#" class="iconfont icon-sousuo"></a>
+                <a href="#" class="packet">
+                    <img src="images/tiaomao.png" alt="">
+                    <span>新人享10-15元红包!</span>
+                </a>
+                <a href="#" class="iconfont icon-gouwuche"></a>
+                <a href="#" class="iconfont icon-menu"></a>
+            </div>
+            <div class="laterHead">
+                <a href="baicaijia.html" class="iconfont icon-fanhui"></a>
+                <a href="#" class="iconfont icon-sousuo"></a>
+                <ul>
+                    <li class="active">
+                        <a href="#market">商品</a>
+                    </li>
+                    <li>
+                        <a href="#comment">评价</a>
+                    </li>
+                </ul>
+                <a href="#" class="iconfont icon-menu"></a>
+                <!-- <a href="#" class="iconfont icon-gouwuche"></a> -->
+            </div>
+        </header>
+        <section id="banner">
+            <a href="#">
+                <div class="tmbanner">
+                    <img src="images/loading-02.gif" alt="">
+                    <div class="tiaomao" id="market">
+                        <i class="iconfont icon-tianmaochaoshi"></i>
+                        <span>一站购齐 . 正品保障 . 极速送达</span>
+                        <div class="box">
+                            <span>视频</span>
+                            <span>图片</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend">
+                    <div class="mon">
+                        <span class="sale"><sub>￥</sub><i>38.9</i> </span>
+                        <span class="recom">超市推荐</span>
+                    </div>
+                    <p>【优惠购】红枣新疆和田大枣45g新疆特产大红枣子</p>
+                    <div>
+                        <span>部分地区包邮</span>
+                        <span class="address">广东惠州</span>
+                    </div>
+                </div>
+            </a>
+        </section>
+        <section id="onsale">
+            <div class="discount">
+                <span>优惠</span>
+                <span>
+                    <img src="images/gouwu.jpg_.webp" alt="">
+                </span>
+                <span>全天猫实物商品通用</span>
+                <span>领取 <i class="fa fa-angle-right"></i></span>
+            </div>
+            <div class="promotion">
+                <div>
+                    <span>促销</span>
+                    <i>促销</i>
+                    <span class="disc">满2件,打5折</span>
+                    <span class="fa fa-angle-right"></span>
+                </div>
+                <p>
+                    <i>积分</i>
+                    <span>购买可得3积分</span>
+                </p>
+            </div>
+        </section>
+        <section id="logistics">
+            <img src="images/chaoshi.jpg_.webp" alt="">
+            <p class="logist">
+                <span>物流</span>
+                <span>至罗湖区 : 23:00前付款，预计10月7日送达</span>
+            </p>
+            <p class="delivery">
+                <img src="images/zhida.jpg_.webp" alt="">
+                <span>天猫保障的配送服务</span>
+            </p>
+            <p class="foreturn">
+                <span>服务</span>
+                <span>破损包退</span>
+            </p>
+            <p class="noblu">
+                <img src="images/wuyougou.jpg_.webp" alt="">
+                <span>全程保障,购物无忧</span>
+            </p>
+        </section>
+        <section id="pack">
+            <span>参数</span>
+            <span>包装方式、种类...</span>
+        </section>
+        <section id="comment">
+            <p class="com">
+                <span>商品评价(278)</span>
+                <span>查看全部 <i class="fa fa-angle-right"></i> </span>
+            </p>
+            <p class="count">
+                <span>价格很实惠(925)</span>
+                <span>物流很快(738)</span>
+                <span>宝贝都很好(551)</span>
+            </p>
+            <p class="nickName">
+                <span class="ico">
+                    <img src="images/timg.jpeg" alt="">
+                </span>
+                <span class="name">s***r</span>
+                <img src="images/huiyuan.jpg_.webp" alt="">
+            </p>
+            <p class="comet">系统默认好评</p>
+            <p class="time">2018-9-12</p>
+        </section>
+        <section id="question">
+            <p class="title">
+                <span>问大家(41)</span>
+                <span>打开APP查看全部 <i class="fa fa-angle-right"></i></span>
+            </p>
+            <p class="remocontent">
+                <i>问</i>
+                <span>东西的质量好不好,会不会很快就坏掉</span>
+                <span class="count">3个回答</span>
+            </p>
+            <p class="remocontent">
+                <i>问</i>
+                <span>东西跟图上的一样吗?</span>
+                <span class="count">2个回答</span>
+            </p>
+        </section>
+        <section id="tmMarket">
+            <div class="logo">
+                <img src="images/tmlogo.jpg_.webp" class="left" alt="">
+                <div class="right">
+                    <span>天猫超市</span>
+                    <i>天猫超市</i>
+                </div>
+            </div>
+            <p class="score">
+                <span>宝贝描述 <i>4.9</i><em class="iconfont icon-jiantouarrow499"></em></span>
+                <span>卖家服务 <i>4.8</i><em class="iconfont icon-jiantouarrow499"></em></span>
+                <span>物流服务 <i>4.9</i><em class="iconfont icon-jiantouarrow499"></em></span>
+            </p>
+            <span>进入店铺</span>
+        </section>
+        <footer id="footer">
+            <span><i class="iconfont icon-dianpu"></i>店铺</span>
+            <span><i class="iconfont icon-shoucang"></i>收藏</span>
+            <span class="buycar">加入购物车</span>
+        </footer>
+    </div>
+</body>
+<!-- 导入zepto.js文件 -->
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/alifont2/iconfont.js"></script>
+<script src="lib/alifont3/iconfont.js"></script>
+<!-- 导入模板引擎js文件 -->
+<script src="lib/artTemplate/template-web.js"></script>
+<!-- 导入自己写的js文件 -->
+<script src="js/goodsDetails.js"></script>
+
+</html>

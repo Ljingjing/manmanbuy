@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>十大品牌页面</title>
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="less/TenBigBrand.less">
+    <script src="lib/less/less.js"></script>
+    <script>
+       // 屏幕适配
+        window.addEventListener('resize', setHtmlFontsize);
+        setHtmlFontsize();
+        function setHtmlFontsize() {
+            var width=document.documentElement.offsetWidth;
+            var htmlFontSize=width/3.75;
+            document.querySelector('html').style.fontSize=htmlFontSize+'PX';
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="index.html" class="logo">
+            <img src="images/header_logo.png" alt="">
+        </a>
+        <a href="index.html" class="app">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+    <!-- 搜索区域 -->
+    <section id="search">
+        <form action="#">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <button type="button" class="mui-btn mui-btn-warning">搜索</button>
+        </form>
+    </section>
+    <!-- 导航栏区域 -->
+    <nav id="nav">
+        <a href="index.html">首页</a>><a href="#">品牌大全</a> > <span></span>
+    </nav>
+    <!-- 主体区域 -->
+    <main id="main">
+        <!-- 品牌排行 -->
+        <section class="brandList">
+           <!--  <div class="title"> </div>
+           <div class="content">
+               <ul class="mui-table-view">
+                   <li class="mui-table-view-cell">
+                       <a class="mui-navigate-right">
+                           <i>1</i>
+                           <div class="info">
+                               <p>海信平板电视</p>
+                               <p class="sales">30天全网销量：1188710件</p>
+                           </div>
+                       </a>
+                   </li>
+                   <li class="mui-table-view-cell">
+                       <a class="mui-navigate-right">
+                           <i>1</i>
+                           <div class="info">
+                               <p>海信平板电视</p>
+                               <p class="sales">30天全网销量：1188710件</p>
+                           </div>
+                       </a>
+                   </li>
+                   <li class="mui-table-view-cell">
+                       <a class="mui-navigate-right">
+                           <i>1</i>
+                           <div class="info">
+                               <p>海信平板电视</p>
+                               <p class="sales">30天全网销量：1188710件</p>
+                           </div>
+                       </a>
+                   </li>
+                   <li class="mui-table-view-cell">
+                       <a class="mui-navigate-right">
+                           <i>1</i>
+                           <div class="info">
+                               <p>海信平板电视</p>
+                               <p class="sales">30天全网销量：1188710件</p>
+                           </div>
+                       </a>
+                   </li>
+                   <li class="mui-table-view-cell">
+                       <a class="mui-navigate-right">
+                           <i>1</i>
+                           <div class="info">
+                               <p>海信平板电视</p>
+                               <p class="sales">30天全网销量：1188710件</p>
+                           </div>
+                       </a>
+                   </li>
+                   <li class="mui-table-view-cell">
+                       <a class="mui-navigate-right">
+                           <i>1</i>
+                           <div class="info">
+                               <p>海信平板电视</p>
+                               <p class="sales">30天全网销量：1188710件</p>
+                           </div>
+                       </a>
+                   </li>
+               </ul>
+           </div> -->
+        </section>
+        <!-- 销量排行 -->
+        <section class="sales">
+           <!--  <div class="title">
+               平板电视产品销量排行
+           </div>
+           <ul class="mui-table-view">
+               <li class="mui-table-view-cell mui-media">
+                   <a href="javascript:;">
+                       <img class="mui-media-object mui-pull-left" src="http://pro-img.zuyushop.com/ProPic/20179/Thumb/Thumb_2017090008503540540.jpg">
+                       <div class="mui-media-body">
+                           <p class='mui-ellipsis'>海信(Hisense) LED55EC500U 55英寸 4K超高清 智能液晶电视</p>
+                           <div class="price"><span>￥2299.00</span><span class="star"></span ></div>
+                           <div class="other"><span>报价(3)</span> <span>全网评论(247565)</span ></div>
+                       </div>
+                   </a>
+               </li>
+               <li class="mui-table-view-cell mui-media">
+                   <a href="javascript:;">
+                       <img class="mui-media-object mui-pull-left" src="#">
+                       <div class="mui-media-body">
+                           木屋
+                           <p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+                       </div>
+                   </a>
+               </li>
+               <li class="mui-table-view-cell mui-media">
+                   <a href="javascript:;">
+                       <img class="mui-media-object mui-pull-left" src="#">
+                       <div class="mui-media-body">
+                           CBD
+                           <p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+                       </div>
+                   </a>
+               </li>
+           </ul> -->
+        </section>
+        <!-- 用户评论 -->
+        <section class="comment">
+        	   <div class="title">
+                平板电视最有用的用户评论
+            </div>
+            <div class="content">
+            	<ul class="mui-table-view">
+                	 <li class="mui-table-view-cell mui-media">
+                        <a href="javascript:;">
+                           <img class="mui-media-object mui-pull-left" src="http://pro-img.zuyushop.com/ProPic/20179/Thumb/Thumb_2017090008503540540.jpg">
+                           <div class="mui-media-body">
+                               <p class='mui-ellipsis'>海信(Hisense) LED55EC500U 55英寸 4K超高清 智能液晶电视
+                               </p>
+                            
+                           </div>
+                         </a>
+                	 </li>
+                	 <div class="con">
+                	     <div class="wraper">
+                	         <div class="title">
+               		       <span>8***m：</span><span class="star"></span ><span>2014/12/20</span>
+                            </div>
+                            <div class="content">这款液晶电视对比其它品牌电视最喜欢的是采用IPS硬屏液晶面板，屏幕比较坚固，质量应该比其它液晶面板会好，极其突出了这款电视的性价比；色彩使用了1920*1080P的分辨率，三重XD引擎，提高了色质的水准、对比度和清晰度，呈现的画质和性能画面色彩也比较清晰，显示效果也比较细腻自然；外观方面采用生动锐利铜钱纹样设计，简约的白色电视底座搭配银色的窄边框感觉比较简单时尚，也是比较喜欢的；功能使用简单，菜单键进入图像，生意，设置，时间，选项，输入，我的媒体8个功能主题，2组HDMI接口满足了我的DVD设备和网络电视机顶和的使用，1组数字音响输出满足我外接5.1音响系统的需要，画面比例点对点扫描，让我接电脑主机的画面设置更简单；炫亮人声Ⅰ，畅听清晰对话的设计。自动识别和加强电影和电视节目中的人声的功能，使我听到的背景声音更清晰突显，标注.音乐.电影.运动.游戏五个声音模式选择满足了日常视听的需求。LG的国际品牌也是比较让大家信赖的</div>
+                        </div>
+                        </div>
+            </ul>
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;">
+                        <img class="mui-media-object mui-pull-left" src="http://pro-img.zuyushop.com/ProPic/20179/Thumb/Thumb_2017090008503540540.jpg">
+                        <div class="mui-media-body">
+                            <p class='mui-ellipsis'>海信(Hisense) LED55EC500U 55英寸 4K超高清 智能液晶电视
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <div class="con">
+                    <div class="wraper">
+                        <div class="title">
+                            <span>8***m：</span><span class="star"></span ><span>2014/12/20</span>
+                        </div>
+                        <div class="content">这款液晶电视对比其它品牌电视最喜欢的是采用IPS硬屏液晶面板，屏幕比较坚固，质量应该比其它液晶面板会好，极其突出了这款电视的性价比；色彩使用了1920*1080P的分辨率，三重XD引擎，提高了色质的水准、对比度和清晰度，呈现的画质和性能画面色彩也比较清晰，显示效果也比较细腻自然；外观方面采用生动锐利铜钱纹样设计，简约的白色电视底座搭配银色的窄边框感觉比较简单时尚，也是比较喜欢的；功能使用简单，菜单键进入图像，生意，设置，时间，选项，输入，我的媒体8个功能主题，2组HDMI接口满足了我的DVD设备和网络电视机顶和的使用，1组数字音响输出满足我外接5.1音响系统的需要，画面比例点对点扫描，让我接电脑主机的画面设置更简单；炫亮人声Ⅰ，畅听清晰对话的设计。自动识别和加强电影和电视节目中的人声的功能，使我听到的背景声音更清晰突显，标注.音乐.电影.运动.游戏五个声音模式选择满足了日常视听的需求。LG的国际品牌也是比较让大家信赖的</div>
+                    </div>
+                    <a class="bottom">平板电视好物榜单</a>
+                </div>
+            </ul>
+            </div>
+        </section>
+    </main>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="top mui-row">
+            <a href="login.html" class="mui-col-xs-4">登录</a>
+            <a href="register.html" class="mui-col-xs-4">注册</a>
+            <a href="javascript:void(0);" class="mui-col-xs-4"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+        </div>
+        <div class="bottom">
+            <p><a href="javascript:void(0);">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台</p>
+            <p>m.manmanbuy.com </p>
+        </div>
+    </footer>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="js/TenBigBrand.js"></script>
+    <script id='tenBrandtpl' type='text/html'>
+        <div class="title">{{biaoti}}哪个牌子好</div>
+        {{each result value index}}
+        <div class="content">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                    <% if (index==1){ %>
+                    <a class="mui-navigate-right" href="chuangwei.html" >
+                    <% } else{ %>
+                    <a class="mui-navigate-right" >
+                    <% } %>
+                        <i>{{index+1}}</i>
+                        <div class="info">
+                            <p>{{value.brandName}}</p>
+                            <p class="sales">{{value.brandInfo}}</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        {{/each}}
+    </script>
+    <script id="getBrandListtpl" type='text/html'>
+        <div class="title">
+            {{biaoti}}产品销量排行
+        </div>
+        <ul class="mui-table-view">
+            {{each result value index}}
+            <li class="mui-table-view-cell mui-media">
+                <!-- <a href="productDetails.html?productid={{value.productId}}"> -->
+                <a href="javascript:void(0);">
+                    {{@value.productImg}}
+                    <div class="mui-media-body">
+                        <p class='mui-ellipsis'>{{value.productName}}</p>
+                        <div class="price"><span>{{value.productPrice}}</span><span class="star"></span ></div>
+                        <div class="other"><span>{{value.productQuote}}</span> <span>全网{{value.productCom}}</span ></div>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+    <script id='getproductcomtpl' type='text/html'>
+        <div class="title">
+            {{biaoti}}最有用的用户评论
+        </div>
+        <div class="content">
+            {{each result value index}}
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;">
+                        {{@productImg}}
+                        <div class="mui-media-body">
+                            <p class='mui-ellipsis'>{{productName}}
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <div class="con">
+                    <div class="wraper">
+                        <div class="title">
+                            <span>{{value.comName}}</span><span class="star"></span ><span>{{value.comTime}}</span>
+                        </div>
+                        <div class="content">{{value.comContent}}</div>
+                    </div>
+                </div>
+            </ul>
+            {{/each}}
+        </div>
+    </script>
+</body>
+
+</html>

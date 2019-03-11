@@ -1,0 +1,125 @@
+@a-color: #666;
+@main-color: #ff841d;
+html {
+    font-size: 100px;
+}
+
+body {
+    font-size: 0.16rem;
+    background-color: transparent;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+a {
+    color: @a-color;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    border: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+i {
+    font-style: normal;
+}
+
+
+/* 头部公共样式区域 */
+
+#header {
+    background-color: @main-color;
+    height: 0.5rem;
+    position: relative;
+    .logo {
+        display: block;
+        text-align: center;
+        padding: 0.12rem 0;
+        img {
+            height: 0.25rem;
+        }
+    }
+    .app {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        padding: 0.07rem;
+        img {
+            height: 0.34rem;
+            width: 0.34rem;
+        }
+    }
+}
+
+
+/* 搜索区域公共样式 */
+
+#search {
+    form {
+        padding: 0.1rem;
+        display: flex;
+        >input {
+            border-radius: 15px;
+            flex: 1;
+            height: 0.3rem;
+            text-align: left;
+        }
+        >button {
+            border-radius: 15px;
+            width: 0.6rem;
+            height: 0.3rem;
+        }
+    }
+}
+/* 底部公共样式 */
+#footer {
+    background-color: #efefef;
+    .top {
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        line-height: 0.34rem;
+        text-align: center;
+        a {
+            &:nth-child(1),
+            &:nth-child(2) {
+                border-right: 1px solid #c4c4c4;
+            }
+            img {
+                width: 0.15rem;
+                height: 0.15rem;
+                vertical-align: baseline;
+            }
+        }
+    }
+    .bottom {
+        text-align: center;
+        padding: 0.15rem 0;
+        p {
+            color: #666666;
+            margin-bottom: 0;
+            font-size: 0.12rem;
+            line-height: 0.15rem;
+            a {
+                color: #666666;
+                &:first-child {
+                    color: red;
+                }
+            }
+        }
+    }
+}

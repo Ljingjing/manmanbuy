@@ -1,0 +1,47 @@
+
+
+@border-color: #c4c4c4;
+@main-color: #f85000;
+@bg-color: #fff;
+@color:#333;
+
+
+body {
+    background-color: #e8ebed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     /* 去除移动端按住元素的时候会出现高亮背景色 */
+     -webkit-tap-highlight-color: transparent;
+     /* 去掉所有移动端边框*/
+     outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+input {
+    border: 0;
+}
+
+
+/* 公共样式*/
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+

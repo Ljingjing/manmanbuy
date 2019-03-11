@@ -1,0 +1,200 @@
+@import "base.less";
+// 主体部分
+#main {
+    width: 100%;
+    background-color: #fff;
+    //面包屑导航
+    .breadcrumbcontent {
+        padding: 0px 8px;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        background-color: #f5f5f5;
+        >.breadcrumb {
+            //ol
+            flex: 1;
+            margin: 0;
+            padding: 0;
+            border-radius: 0;
+            height: 40px;
+            >li {
+                position: relative;
+                >a {
+                    display: block;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 15px;
+                    color: #000;
+                    margin-left: 10px;
+                    text-decoration: none;
+                }
+                &:first-of-type {
+                    >a {
+                        margin-left: 0px;
+                    }
+                    &::before {
+                        content: "";
+                    }
+                }
+                &::before {
+                    position: absolute;
+                    color: #000;
+                    content: ">\00a0";
+                    top: 10px;
+                    left: -5px;
+                }
+            }
+        }
+        >.select {
+            box-sizing: border-box;
+            background-color: #d4d4d4;
+            background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+            color:#000;
+            width: 60px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            box-shadow: 0 0 1px #666;
+            border-radius: 5px;
+            font-size: 15px;
+            margin-top: 5px;
+            text-decoration: none;
+        }
+    } 
+    //商品展示
+    .productlist {
+        >.mui-table-view {
+            //ul
+            margin: 0;
+            padding: 0;
+            >img{
+                width: 200px;
+                height: 200px;
+                margin-left: 80px;
+                opacity: .5;
+            }
+            >.mui-table-view-cell {
+                //li
+                margin: 0;
+                padding: 10px 8px;
+                height: 140px;
+                border-bottom: 1px solid #ccc;
+                >a {
+                    margin: 0;
+                    padding: 0;
+                    display: block;
+                    text-decoration: none;
+                    >img {
+                        //注意这里的img标签是数据库中请求来的，所以没有框架的类名
+                        max-width: 100px;
+                        height: 100px;
+                        margin-right: 10px;
+                        text-align: center;
+                        float: left;
+                    }
+                    >.mui-media-body {
+                        >.tit {
+                            font-size: 15px;
+                            height: 56px;
+                            line-height: 28px;
+                            color: #333333;
+                            word-break: break-all;
+                            white-space: normal;
+                            overflow: hidden;
+                            -webkit-line-clamp: 2;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                        }
+                        >.price {
+                            color: #ed0000;
+                            font-size: 18px;
+                            line-height: 20px;
+                            overflow: hidden;
+                            margin-top: 6px;
+                        }
+                        >.other {
+                            display: -webkit-box;
+                            margin-top: 4px;
+                            >.mall {
+                                color: #a1a1a1;
+                                line-height: 21px;
+                                overflow: hidden;
+                                -webkit-line-clamp: 1;
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-box-flex: 1;
+                            }
+                            >.sales {
+                                text-align: right;
+                                color: #a1a1a1;
+                                line-height: 21px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    // 分页
+    .page {
+        height: 80px; // padding: 5px 10px;
+        background-color: #efefef;
+        padding: 20px 0px;
+        text-align: center;
+        >span {
+            height: 36px; // margin-top: 2px;
+            display: inline-block;
+            &:first-of-type,
+            &:last-of-type {
+                width: 80px;
+                box-sizing: border-box;
+                background-color: #d4d4d4;
+                background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+                background: -moz-linear-gradient(top, #f1f1f1, #d4d4d4);
+                background: -o-linear-gradient(top, #f1f1f1, #d4d4d4);
+                border-bottom: 1px solid #bababa;
+                box-shadow: 0 0 1px #666;
+                border-radius: 5px;
+                text-align: center;
+                font-size: 14px;
+                line-height: 36px;
+                overflow: hidden;
+                >a {
+                    color: #5a5a5a;
+                    text-decoration: none;
+                }
+            }
+            &:nth-of-type(2) {
+                margin: 0px 80px;
+                position: relative;
+                >select {
+                    background-color: #d4d4d4;
+                    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+                    position: absolute;
+                    top: 0px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    color: #5a5a5a;
+                    >option {
+                        color: #5a5a5a;
+                        background-color: #d4d4d4;
+                    }
+                }
+            }
+        }
+    } 
+    //相关链接
+    .rellink {
+        background: #efefef;
+        line-height: 24px;
+        text-align: left;
+        padding-left: 10px;
+        font-size: 16px;
+        font-family: bold;
+        padding-bottom: 20px;
+        >a {
+            font-size: 12px;
+            color: #b9b9b9;
+        }
+    }
+}
+

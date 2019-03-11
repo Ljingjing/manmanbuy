@@ -1,0 +1,63 @@
+@import "basezhong.less";
+.mui-content {
+    .jiage {
+        opacity: 1;
+        &.sort {
+            transform: rotate(180deg);
+        }
+    }
+    .pinlun {
+        opacity: 1;
+        &.sort {
+            transform: rotate(180deg);
+        }
+    }
+    background-color: #ffffff !important;
+    >div {
+        #segmentedControl {
+            >a {
+                line-height: 40px;
+                color: grey;
+                &.mui-active {
+                    border-bottom: none;
+                    color: #ed0000;
+                }
+            }
+        }
+        #item1 {
+            >ul {
+                >li {
+                    display: flex;
+                    padding: 11px 8px;
+                    border-bottom: 1px solid #ccc;
+                    .pic {}
+                    img {
+                        width: 120px;
+                        height: 120px;
+                    }
+                    .inf {
+                        margin-left: 5px;
+                        .price {
+                            margin-top: 10px;
+                            font-size: 16px;
+                            color: red;
+                            font-weight:600;
+                        }
+                        .other {
+                            margin-top: 10px;
+                            color: #a1a1a1;
+                            line-height: 21px;
+                            font-size: 12px;
+                            .mall {
+                                float: left;
+                            }
+                            .sales {
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

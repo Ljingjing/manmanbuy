@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet/less" href="./less/login.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+    <!-- 头部  开始 -->
+    <header id="header">
+            <a href="index.html" class="icon-logo">
+                <img src="./images/logo.png" alt="">
+            </a>
+            <a href="javascript:void(0);" class="icon-appdownload">
+                <img src="./images/appdownload.png" alt="">
+            </a>
+        </header>
+        <!-- 头部  结束 -->
+        <!-- 搜索框  开始 -->
+        <section id="search">
+            <form action="javascript:void(0);">
+                <input type="search" placeholder="请输入你想比价的商品">
+                <a href="javascript:void(0);">搜索</a>
+            </form>
+        </section>
+        <!-- 搜索框  结束 -->
+    <!-- 头部区域 -->
+    <!-- <header id="header">
+        <div class="top">
+            <div class="logo">
+                <img src="./images/login-logo.png" alt="">
+            </div>
+            <div class="download">
+                <img src="./images/download.png" alt="">
+            </div>
+        </div>
+        <form action="#">
+            <div class="searchBox">
+                <input type="search" class="search" placeholder="请输入你想比价的商品">
+                <a href="#" class="submit">搜索</a>
+            </div>
+        </form>
+    </header> -->
+    <!-- 主体登录区域 -->
+    <main id="main">
+        <form action="#">
+            <div class="login">
+                <div class="uName">
+                    <input type="text" name="" id="userName" placeholder="用户名/手机号">
+                </div>
+               <div class="pword">
+                <input type="password" name="" id="password">
+               </div>
+               <div class="login-btn">
+                   <a id="btn" href="#">登录</a>
+               </div>
+                <div class="already">
+                    <input type="checkbox" id="checkbox">
+                    <span>一个月内自动登录</span>
+                </div>
+                <div class="tips">
+                    <span id="wrong">用户名或密码错误!</span>
+                </div>
+            </div>
+        </form>
+    </main>
+     <!-- 底部登录注册区域 -->
+     <footer id="footer">
+        <div class="upload">
+            <p>
+                忘记密码：请电脑登录<a href="#">www.manmanbuy.com</a>找回
+            </p>
+        </div>
+        <div class="service">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="javascript: scroll(0, 0)">
+                <i class="up">
+                    <img src="./images/top.jpg" alt="">
+                </i>
+                返回顶部
+            </a>
+        </div>
+        <div class="download">
+            <p>
+                <a href="#">手机APP下载</a>
+                <span>慢慢买手机版</span>
+                <i>--掌上比价平台</i>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./js/login.js"></script>
+</body>
+</html>

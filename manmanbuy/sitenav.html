@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商城导航</title>
+    <!-- 1. 引入MUI的CSS -->
+    <!-- <link rel="stylesheet" href="lib/mui/css/mui.css"> -->
+
+    <!-- 2. 引入字体图标的CSS -->
+    <!-- <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css"> -->
+
+    <!-- 3. 引入主页的less rel="stylesheet/less"-->
+    <link rel="stylesheet/less" href="less/sitenav.less">
+
+    <!-- 4. 引入less.js编译器文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="return">
+            <a href="index.html"></a>
+        </div>
+        <span>商城导航</span>
+        <div class="down">
+            <a href="index.html">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <main id="main">
+        <div class="box">
+            <div class="jd">
+                <a href="http://union.click.jd.com/jdc?e=&p=AiIBZRprFDJWWA1FBCVbV0IUEEULXg1cAAQJS14M…xkSUGZZHkcCaUJQWiUXVyUDIgRUHF8XCxUDVytrc38i&t=W1dCFBBFC14NXAAECUteDA%3D%3D">
+                    <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt="">
+                    <span>京东商城</span>
+                </a>
+            </div>
+            <div class="jd">
+                <a href="http://union.click.jd.com/jdc?e=&p=AiIBZRprFDJWWA1FBCVbV0IUEEULXg1cAAQJS14M…xkSUGZZHkcCaUJQWiUXVyUDIgRUHF8XCxUDVytrc38i&t=W1dCFBBFC14NXAAECUteDA%3D%3D">
+                    <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt="">
+                    <span>京东商城</span>
+                </a>
+            </div>
+            <div class="jd">
+                <a href="http://union.click.jd.com/jdc?e=&p=AiIBZRprFDJWWA1FBCVbV0IUEEULXg1cAAQJS14M…xkSUGZZHkcCaUJQWiUXVyUDIgRUHF8XCxUDVytrc38i&t=W1dCFBBFC14NXAAECUteDA%3D%3D">
+                    <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt="">
+                    <span>京东商城</span>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <section class="nav">
+            <div class="top">
+                <a class="login" href="login.html">登录</a>
+                <a class="sign" href="register.html">注册</a>
+                <a class="move" href="javascript:void(0);">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                    返回顶部
+                </a>
+            </div>
+            <div class="bottom">
+                <p class="f1">
+                    <a class="a1" href="javascript:void(0);">手机APP下载</a>
+                    <a class="a2" href="javascript:void(0);">慢慢买手机版</a>
+                    --掌上比价平台
+                </p>
+                <p class="f2">
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </section>
+    </footer>
+
+    <script id="tpl" type="text/html">
+        {{ each result value }}
+        <div class="jd">
+            <a href="{{value.navHref}}">
+                <img src="{{value.navImg}}" alt="">
+                <span>{{ value.navTitle }}</span>
+            </a>
+        </div>
+    {{ /each }}
+    </script>
+
+    <!-- 5. 引入zepto.js -->
+    <script src="lib/zepto/zepto.min.js"></script>
+
+    <!-- 6. 引入MUI.js -->
+    <!-- <script src="lib/mui/js/mui.js"></script> -->
+
+    <!-- 7. 引入模板引擎的JS 注意引入template-web.js-->
+    <script src="lib/artTemplate/template-web.js"></script>
+
+    <!-- 8. 引入主页自己的JS文件 -->
+    <script src="js/sitenav.js"></script>
+</body>
+
+</html>

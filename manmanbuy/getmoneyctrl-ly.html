@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mmb.海淘折扣</title>
+    <!-- 1. 引入mui的CSS文件 提供mui样式 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 2. 引入字体图标的CSS文件  提供字体图标-->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 3. 引入自己主页的less文件 注意 rel="stylesheet/less"-->
+    <link rel="stylesheet/less" href="./less/getmoneyctrl-ly.less">
+    <!-- 4. 引入less的编译器文件 编译less -->
+    <script src="lib/less/less.js"></script>
+    <script src="./js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部搜索区域 -->
+    <header id="header">
+        <a class="fa fa-arrow-left" href="javascript:history.back()"></a>
+        <h4>海淘折扣-最新优惠</h4>
+        <!-- 右边logo -->
+        <div class="app-logo mui-pull-right">
+            <img src="./images/header_app.png" alt="">
+        </div>
+    </header>
+
+    <!-- 内容区域 -->
+    <section id="super">
+        <div class="mui-scroll-wrapper mui-content" id="refreshContainer">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+                <ul class="mui-table-view mui-table-view-chevron product-list">
+                    <!-- <li class="mui-table-view-cell mui-media ">
+                        <a href="javascript:;">
+                            <img class="mui-media-object mui-pull-left" src="./images/ic_bcj.png">
+                            <div class="mui-media-body">
+                                <p class="detail">移动端凑单品：海天 鲜味 生抽
+                                    1.28L</p>
+                                <p class="price"><span>10.9</span>元</p>
+                                <p class='time'>京东商城 | 10-25 14:10</p>
+                                <span class="comment">
+                                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                                    3
+                                </span>
+
+                            </div>
+                        </a>
+                    </li>
+                    -->
+
+                </ul>
+                <!-- <div class="mui-content-padded">
+                    <span class="left">上一页</span>
+                    <select class="select">
+                        <option value>1</option>
+                        <option value>2</option>
+                        <option value>3</option>
+                        <option value>4</option>
+                        <option value>5</option>
+                        <option value>6</option>
+                    </select>
+                    <span class="right">下一页</span>
+                </div> -->
+            </div>
+        </div>
+
+    </section>
+
+    <!-- 底部分页栏 -->
+    <footer id="footer">
+        <div class="footer-nav">
+            <a href="login.html" class="login-btn">登录</a>
+            <a href="register.html" class="register-btn">注册</a>
+            <a href="#" class="return-btn" id="back-to-top"><i class="fa fa-arrow-up"></i> 返回顶部</a>
+        </div>
+        <div class="phone">
+            <a href="#">手机APP下载</a><span>慢慢买手机版 - - 掌上比价平台</span>
+            <p>m.manmanbut.com</p>
+        </div>
+    </footer>
+    <div class="mask">
+        <img src="./images/timg.gif" alt="">
+    </div>
+
+    <script type="text/html" id="refurbishTmp">
+        {{each result value i}}
+    <li class="mui-table-view-cell mui-media" data-productId={{value.productId}}>
+        <a href="javascript:;">
+           {{@value.productImgSm}}
+            <div class="mui-media-body">
+                <p class="detail">{{value.productName}}</p>
+                <p class="price"><span>{{value.productPinkage}}</span>元</p>
+                <p class='time'>{{value.productFrom}} | {{value.productTime}}</p>
+               
+            </div>
+            <span class="comment">
+                 <i class="fa fa-commenting" aria-hidden="true"></i>
+                    <!-- {{value.productComCount}} -->
+                 {{value.productComCount.replace('有','').replace('人评论','')}}
+            </span>
+        </a>
+    </li>
+    {{/each}}
+    </script>
+
+    <!-- 引入模板的JS -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 引入ZEPTO.js -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入mui的JS -->
+    <script src="lib/mui/js/mui.min.js"></script>
+    <!-- 引入自己写的JS文件 -->
+    <script src="js/getmoneyctrl-ly.js"></script>
+
+
+
+</body>
+
+</html>

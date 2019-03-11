@@ -1,0 +1,272 @@
+@import "basexu.less";
+html,
+body {
+    width: 100%;
+    height: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+body {
+    padding-top: 0.5rem;
+}
+
+#container {
+    max-width: 7.5rem;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    #back {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        right:10px;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        z-index: 800;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        &.iconfont {
+            font-size: 30px;
+            color: #ff5000;
+        }
+    }
+    #header {
+        max-width: 750px;
+        height: 0.5rem;
+        background-color: #fe4a65;
+        padding: 0.08rem 0.1rem;
+        display: flex;
+        line-height: 0.34rem;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 999;
+        .logo {
+            display: block;
+            width: 0.62rem;
+            color: #fff;
+        }
+        >form {
+            flex: 1;
+            >input {
+                height: 0.3rem;
+                font-size: 0.12rem;
+            }
+        }
+        .icon {
+            .icon-menu {
+                font-size: 0.2rem;
+                display: block;
+                width: 0.25rem;
+                margin-left: 0.06rem;
+                color: #fff;
+            }
+        }
+    }
+    
+    #nav {
+        padding-top: 0.2rem;
+        background-color: #fff;
+        .mui-row {
+            a {
+                display: block;
+                text-align: center;
+                >i {
+                    text-align: center;
+                    width: 0.51rem;
+                    height: 0.51rem;
+                    margin: 0 auto;
+                    margin-bottom: 0.1rem;
+                    display: block;
+                    line-height: 0.51rem;
+                    border-radius: 50%;
+                    text-align: center;
+                    color: #ffffff;
+                    font-size: 0.3rem;
+                    &.icon-huo {
+                        background-color: #ffc151;
+                    }
+                    &.icon-99 {
+                        background-color: #fe4a65;
+                    }
+                    &.icon-liwu {
+                        background-color: #ff7692;
+                    }
+                    &.icon-popularity_value {
+                        background-color: #a992ff;
+                        font-size: 0.36rem;
+                    }
+                }
+            }
+        }
+    }
+    #hot {
+        margin-top: 0.1rem;
+        background-color: #fff;
+        .title {
+            padding: 0.1rem;
+            font-size: 0.12rem;
+            overflow: hidden;
+            .hot_list {
+                padding-left: 0.1rem;
+                font-size: 0.14rem;
+                font-weight: 700;
+                float: left;
+                border-left: 0.03rem solid #fe4a65;
+            }
+            .more {
+                float: right;
+            }
+        }
+        .pro_content {
+            padding-right: 0.1rem;
+            width: 100%;
+            overflow: auto;
+            margin-left: 0.1rem;
+            .swiper-container {
+                width: 100%;
+                .swiper-slide {
+                    width: auto;
+                    ul {
+                        >li {
+                            width: 100%;
+                            float: left;
+                            width: auto;
+                            margin-right: 0.06rem;
+                            position: relative;
+                            &::after {
+                                content: "券";
+                                position: absolute;
+                                top: 0;
+                                right: -0.14rem;
+                                width: .3rem;
+                                height: .5rem;
+                                background: url(../images/flag.png) no-repeat;
+                                font-size: .12rem;
+                                color: #fff;
+                                text-align: left;
+                                line-height: .32rem;
+                                padding-left: .03rem;
+                            }
+                            >a {
+                                width: 1.36rem;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                display: block;
+                                text-align: center;
+                                font-size: 0.14rem;
+                                >img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                                >p {
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    line-height: 0.3rem;
+                                    margin-bottom: 0;
+                                    font-size: .12rem;
+                                }
+                                >div {
+                                    overflow: hidden;
+                                    &.top {
+                                        font-size: 0.12rem;
+                                        padding-bottom: 0.06rem;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                    }
+                                    >span {
+                                        color: #9b9b9b;
+                                        font-size: 0.12rem;
+                                      
+                                        &:first-child {
+                                            float: left;
+                                            margin-left: 0.05rem;
+                                        }
+                                        &:last-child {
+                                            float: right;
+                                            margin-right: 0.05rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #main {
+        margin-top: 0.1rem;
+        background-color: #fff;
+        padding-left: .05rem;
+        #products {
+            .title {
+                padding: 0.1rem;
+                font-size: 0.12rem;
+                .titl_dec {
+                    color: #666;
+                    font-size: 0.14rem;
+                    font-weight: 700;
+                    border-left: 0.03rem solid #fe4a65;
+                    padding-left: 0.04rem;
+                }
+                >i {
+                    background-color: #ffe5ec;
+                    color: #fe4a65;
+                    height: 0.2rem;
+                    border-radius: 0.04rem;
+                    padding: 0.04rem;
+                    margin-left: 0.1rem;
+                }
+            }
+            .content {
+                >ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    >li {
+                        width: 48%;
+                        margin-right: 0.06rem;
+                        margin-bottom: 0.1rem;
+                        a {
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            text-align: center;
+                            >img {
+                                width: 100%; // height: 1.9rem;
+                            }
+                            >p {
+                                width: 100%;
+                                font-size: 0.12rem;
+                                margin-top: 0.1rem;
+                                overflow: hidden;
+                                white-space: nowrap;
+                            }
+                            >span {
+                                &.money {
+                                    font-size: 0.14rem;
+                                    float: left;
+                                    color: #ff4b5f;
+                                    margin-left: 0.3rem;
+                                }
+                                &.brought {
+                                    float: right;
+                                    color: #ccc;
+                                    font-size: 0.12rem;
+                                    margin-right: 0.3rem;
+                                    >i {
+                                        color: #ecabab;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
